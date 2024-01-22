@@ -25,7 +25,25 @@
   </head>
   <!-- Custom CSS -->
   <style>
+    /* Style for the clickable header */
+    .clickable-header {
+      cursor: pointer;
+      color: blue;
+      text-decoration: underline;
+    }
 
+    /* Initially hide the content of the list */
+    .hidden-list {
+      padding: 0;
+      margin: 0;
+      display: none;
+      padding-left: 40px; /* Adjust the indentation as needed */
+    }
+
+    /* Style for list items */
+    .project-item {
+      margin-bottom: 15px;
+    }
  </style>
 
 
@@ -63,9 +81,9 @@
             </p>
             <p>
               I am currently a member of the <a href="https://github.com/f-coda" target="_blank"><b>f-coda</b></a> research group, specializing in Efficient Computing and Data Analytics.
-              My main research interests include Distributed Computing, Edge and Cloud Computing, Big Data
+              My main research interests include <i>Distributed Computing, Edge and Cloud Computing, Big Data
               Management and Analysis, Machine/Deep learning, NoSQL Database System, High Performance Computing (HPC),
-              Spatiotemporal and Trajectory Analysis and Stream Processing.
+              Spatiotemporal and Trajectory Analysis and Stream Processing</i>.
             </p>
             <p>
               I have participated in numerous EU funded and national projects.
@@ -137,21 +155,24 @@
           <h2 id="education">Education</h2>
 
           <strong>PhD in Distributed Systems</strong><br />
-          <p>
-            Harokopio University of Athens, Greece (Oct 2015 – July 2022)<br />
-            Thesis: A study on the query response time minimization in distributed (spatiotemporal) data stores
+          <p style="margin: 0; padding: 0;">
+            Harokopio University of Athens, Greece<br />
+            Thesis: A study on the query response time minimization in distributed (spatiotemporal) data stores [<a href="https://www.didaktorika.gr/eadd/handle/10442/51982" target="_blank">link</a>]
+          <p><i><small>Oct 2015 – July 2022</small></i></p>
           </p>
 
           <strong>MSc in Web Engineering</strong><br />
-          <p>
-            Harokopio University of Athens, Greece (Sep 2013 – July 2022)<br />
-            Thesis: Implementation of function in R tool in parallel environment
+          <p style="margin: 0; padding: 0;">
+            Harokopio University of Athens, Greece<br />
+            Thesis: Implementation of function in R tool in parallel environment [<a href="https://arxiv.org/pdf/1905.06237.pdf" target="_blank">link</a>]
+          <p><i><small>Sep 2013 – July 2015</small></i></p>
           </p>
 
           <strong>BSc in Informatics and Telematics</strong><br />
-          <p>
-              Harokopio University of Athens, Greece (Sep 2008 – Sep 2013)<br />
+          <p style="margin: 0; padding: 0;">
+              Harokopio University of Athens, Greece<br />
             Thesis: Gadget recommendation and composition mechanism, in the environment of academic social network Unity, based on user experience
+          <p><i><small>Sep 2008 – Sep 2013</small></i></p>
           </p>
         </div>
       </div>
@@ -228,55 +249,66 @@
           <ul>
               <li>
                   <a href="#" onclick="return false;" target="_blank"><strong>PANDORA (HE)</strong></a>
-                  <p>A Comprehensive Framework enabling the Delivery of Trustworthy Datasets for Efficient AIoT Operation.</p>
+                  <p style="margin: 0; padding: 0;">A Comprehensive Framework enabling the Delivery of Trustworthy Datasets for Efficient AIoT Operation.</p>
+                <p><i><small>Apr 2023 – Present</small></i></p>
               </li>
 
               <li>
                   <a href="https://www.charity-project.eu/" target="_blank"><strong>CHARITY (H2020)</strong></a>
-                  <p>CHARITY aspires to leverage the benefits of intelligent, autonomous orchestration of cloud, edge, and network resources, to create a symbiotic relationship between low and high latency infrastructures that will facilitate the needs of emerging applications.</p>
+                  <p style="margin: 0; padding: 0;">CHARITY aspires to leverage the benefits of intelligent, autonomous orchestration of cloud, edge, and network resources, to create a symbiotic relationship between low and high latency infrastructures that will facilitate the needs of emerging applications.</p>
+                  <p><i><small>Jan 2021 – Present</small></i></p>
               </li>
 
               <li>
                   <a href="https://www.smartship2020.eu/" target="_blank"><strong>SmartShip (H2020-MSCA-RISE-2018)</strong></a>
-                  <p>A data analytics, decision support and circular economy – based multi-layer optimization platform towards a holistic energy efficiency, fuel consumption and emissions management of vessels.</p>
+                  <p style="margin: 0; padding: 0;">A data analytics, decision support and circular economy – based multi-layer optimization platform towards a holistic energy efficiency, fuel consumption and emissions management of vessels.</p>
+                  <p><i><small>May 2019 – Present</small></i></p>
               </li>
           </ul>
 
-          <h4>&#8618; Past Projects </h4>
-          <ul>
-            <li>
+          <h4 style="color: #333; display: inline-block; margin-right: 5px;">&#8618;</h4>
+          <h4 class="clickable-header" id="pastProjectsHeader" style="color: #333; text-decoration-style: dotted; display: inline-block;">Past Projects</h4>
+          <ul class="hidden-list" id="pastProjectsList">
+            <li class="project-item">
                 <a href="https://www.fns-cloud.eu/" target="_blank"><strong>FNS-Cloud (H2020)</strong></a>
-                <p>Food Nutrition Security Cloud (FNS-Cloud) has launched the first ‘food cloud’, federating existing and emerging datasets, tools and services to support European research.</p>
+                <p style="margin: 0; padding: 0;">Food Nutrition Security Cloud (FNS-Cloud) has launched the first ‘food cloud’, federating existing and emerging datasets, tools and services to support European research.</p>
+               <p><i><small>Apr 2019 – June 2023</small></i></p>
             </li>
 
-            <li>
+            <li class="project-item">
                 <a href="http://83.212.240.62/" target="_blank"><strong>GLASSEAS (National funded ESPA 2019)</strong></a>
-                <p>A global, distributed surveillance system for early detection and analysis of anomalous vessel trajectories.</p>
+                <p style="margin: 0; padding: 0;">A global, distributed surveillance system for early detection and analysis of anomalous vessel trajectories.</p>
+                <p><i><small>Apr 2019 – June 2020</small></i></p>
             </li>
 
-            <li>
+            <li class="project-item">
                 <a href="http://www.master-project-h2020.eu/" target="_blank"><strong>MASTER (H2020-MSCA-RISE-2017)</strong></a>
-                <p>MASTER (Multiple ASpects TrajEctoRy management and analysis) is a project with the objective of forming an international and inter-sectoral network of organisations working on a joint research programme to define new methods to build, manage and analyse multiple aspects semantic trajectories.</p>
+                <p style="margin: 0; padding: 0;">MASTER (Multiple ASpects TrajEctoRy management and analysis) is a project with the objective of forming an international and inter-sectoral network of organisations working on a joint research programme to define new methods to build, manage and analyse multiple aspects semantic trajectories.</p>
+                <p><i><small>Mar 2018 – Dec 2023</small></i></p>
             </li>
 
-            <li>
+            <li class="project-item">
                 <a href="https://productive40.eu/" target="_blank"><strong>Productive 4.0 (H2020)</strong></a>
-                <p>Productive4.0 is an ambitious holistic innovation project, meant to open the doors to the potentials of Digital Industry and to maintain a leadership position of the industries in Europe. All partners involved will work on creating the capability to efficiently design and integrate hardware and software of Internet of Things (IoT) devices.</p>
+                <p style="margin: 0; padding: 0;">Productive4.0 is an ambitious holistic innovation project, meant to open the doors to the potentials of Digital Industry and to maintain a leadership position of the industries in Europe. All partners involved will work on creating the capability to efficiently design and integrate hardware and software of Internet of Things (IoT) devices.</p>
+                <p><i><small>May 2017 – Apr 2020</small></i></p>
             </li>
 
-            <li>
+            <li class="project-item">
                 <a href="#" onclick="return false;"><strong>Optimal (HUA internally-funded project)</strong></a>
-                <p>Middleware development for the optimal replica placement in distributed key-value stores & fault tolerance techniques in infrastructures for large-scale data management.</p>
+                <p style="margin: 0; padding: 0;">Middleware development for the optimal replica placement in distributed key-value stores & fault tolerance techniques in infrastructures for large-scale data management.</p>
+               <p><i><small>Dec 2016 – Dec 2017</small></i></p>
             </li>
 
-            <li>
+            <li class="project-item">
                 <a href="#" onclick="return false;"><strong>Asylum Service Application (National funded)</strong></a>
-                <p>Mobile Application for international applicants protection.</p>
+                <p style="margin: 0; padding: 0;">Mobile Application for international applicants protection.</p>
+                <p><i><small>Mar 2016 – May 2016</small></i></p>
             </li>
 
-            <li>
+            <li class="project-item">
                 <a href="https://www.fortissimo-project.eu/en/success-stories/508/cloudbased-simulation-of-the-binding-capacities-of-target-drug-compounds" target="_blank"><strong>Fortissimo (FP7)</strong></a>
-                <p>Cloud-based simulation of the binding capacities of target drug.</p>
+                <p style="margin: 0; padding: 0;">Cloud-based simulation of the binding capacities of target drug.</p>
+               <p><i><small>Sep 2014 – May 2016</small></i></p>
             </li>
         </ul>
 
@@ -395,6 +427,12 @@
     var lastUpdate = new Date(); // Set this date to your last update time
 
     lastUpdateElement.textContent = lastUpdate.toLocaleDateString();
+
+
+    document.getElementById('pastProjectsHeader').addEventListener('click', function() {
+      var projectsList = document.getElementById('pastProjectsList');
+      projectsList.style.display = (projectsList.style.display === 'none' || projectsList.style.display === '') ? 'block' : 'none';
+    });
   </script>
 
   </body>
