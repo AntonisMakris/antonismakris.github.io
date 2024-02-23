@@ -31,6 +31,8 @@
       };
     </script>
 
+
+
   </head>
   <!-- Custom CSS -->
   <style>
@@ -448,8 +450,13 @@
     </div>
     <!-- /.container -->
 
-
-
+    <script>
+      $(document).ready(function() {
+        $('#pastProjectsHeader').click(function() {
+          $('#pastProjectsList').toggle();
+        });
+      });
+    </script>
 
 
   </body>
