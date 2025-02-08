@@ -7,455 +7,464 @@
 -->
 
 <html lang="en">
-  <head>
+<head>
     <title>Antonios Makris</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
     <link
-      href="https://fonts.googleapis.com/css?family=Oswald:700"
-      rel="stylesheet"
-      type="text/css"
+            href="https://fonts.googleapis.com/css?family=Oswald:700"
+            rel="stylesheet"
+            type="text/css"
     />
 
     <script>
-      window.onload = function() {
-        var lastModifiedDate = document.lastModified;
-        var lastUpdateElement = document.getElementById('lastUpdate');
-        lastUpdateElement.innerHTML = "Last Updated: " + lastModifiedDate;
-      };
+        window.onload = function() {
+            var lastModifiedDate = document.lastModified;
+            var lastUpdateElement = document.getElementById('lastUpdate');
+            lastUpdateElement.innerHTML = "Last Updated: " + lastModifiedDate;
+        };
     </script>
 
 
 
-  </head>
-  <!-- Custom CSS -->
-  <style>
+</head>
+<!-- Custom CSS -->
+<style>
     /* Style for the clickable header */
     .clickable-header {
-      cursor: pointer;
-      color: blue;
-      text-decoration: underline;
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
     }
 
     /* Initially hide the content of the list */
     .hidden-list {
-      padding: 0;
-      margin: 0;
-      display: none;
-      padding-left: 40px; /* Adjust the indentation as needed */
+        padding: 0;
+        margin: 0;
+        display: none;
+        padding-left: 40px; /* Adjust the indentation as needed */
     }
 
     /* Style for list items */
     .project-item {
-      margin-bottom: 15px;
+        margin-bottom: 15px;
     }
- </style>
+</style>
 
 
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse">
-      <div class="container">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Home</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <!-- <li><a href="#experience">Experience</a></li> -->
-          <li><a href="#publication">Publication</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Page Content -->
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse">
     <div class="container">
-      <div class="row">
+        <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <!-- <li><a href="#experience">Experience</a></li> -->
+            <li><a href="#publication">Publication</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
         <!-- Entries Column -->
         <div class="col-md-8">
-          <!-- Main Image -->
-          <img class="img-responsive" src="photo.jpg" alt="" width="320" height="320" /><br />
+            <!-- Main Image -->
+            <img class="img-responsive" src="photo.jpg" alt="" width="320" height="320" /><br />
 
-          <div style="margin-top: 3%; text-align: justify">
-            <p>
-              I am currently a Senior Researcher at the <a href="https://www.ece.ntua.gr/en" target="_blank">School of Electrical and Computer Engineering</a>, National Technical University of Athens, advised by
-              <a href="https://tserpes.dit.people.hua.gr/" target="_blank">Prof. Konsantinos Tserpes</a>.
-              I received a BSc Degree in Computer Science in 2013 and an MSc Degree in Web Engineering in 2015, both from
-              Harokopio University of Athens. In 2022, I completed my PhD in the area of Distributed Systems at the same
-              department.
-            </p>
-            <p>
-              I am currently a member of the <a href="https://github.com/Efficient-Computing-Lab" target="_blank"><b>Efficient Computing Lab</b></a>, specializing in Efficient Computing and Data Analytics.
-              My main research interests include <i>Distributed Computing, Edge and Cloud Computing, Big Data
-              Management and Analysis, Machine/Deep learning, NoSQL Database System, High Performance Computing (HPC),
-              Spatiotemporal and Trajectory Analysis and Stream Processing</i>.
-            </p>
-            <p>
-              I have participated in numerous EU funded and national projects.
-            </p>
-          </div>
+            <div style="margin-top: 3%; text-align: justify">
+                <p>
+                    I am currently a Senior Researcher at the <a href="https://www.ece.ntua.gr/en" target="_blank">School of Electrical and Computer Engineering</a>, National Technical University of Athens, advised by
+                    <a href="https://tserpes.dit.people.hua.gr/" target="_blank">Prof. Konsantinos Tserpes</a>.
+                    I received a BSc Degree in Computer Science in 2013 and an MSc Degree in Web Engineering in 2015, both from
+                    Harokopio University of Athens. In 2022, I completed my PhD in the area of Distributed Systems at the same
+                    department.
+                </p>
+                <p>
+                    I am currently a member of the <a href="https://github.com/Efficient-Computing-Lab" target="_blank"><b>Efficient Computing Lab</b></a>, specializing in Efficient Computing and Data Analytics.
+                    My main research interests include <i>Distributed Computing, Edge and Cloud Computing, Big Data
+                    Management and Analysis, Machine/Deep learning, NoSQL Database System, High Performance Computing (HPC),
+                    Spatiotemporal and Trajectory Analysis and Stream Processing</i>.
+                </p>
+                <p>
+                    I have participated in numerous EU funded and national projects.
+                </p>
+            </div>
         </div>
 
         <!-- Contact Info on the Sidebar -->
         <div class="col-md-4">
-          <div style="font-family: 'Oswald', sans-serif; font-size: 32px">
-            <b>Antonios Makris</b>
-          </div>
-          <br />
-          <p>
-            <b>antoniosmakris [at] mail [dot] ntua [dot] gr</b><br />
-          </p>
+            <div style="font-family: 'Oswald', sans-serif; font-size: 32px">
+                <b>Antonios Makris</b>
+            </div>
+            <br />
+            <p>
+                <b>antoniosmakris [at] mail [dot] ntua [dot] gr</b><br />
+            </p>
 
         </div>
 
         <!-- Links on the Sidebar -->
         <div class="col-md-4" style="margin-top: 2%">
 
-          <dd>
-            <a href="https://www.linkedin.com/in/antonios-makris-8a9253145/" target="_blank" style="color: #0a66c2;">LinkedIn</a>
-          </dd>
-          <dd>
-            <a
-              href="https://scholar.google.com/citations?user=j5DZpL4AAAAJ&hl=el"
-              target="_blank" target="_blank" style="color: #1a73e8;">Google Scholar</a>
-          </dd>
-          <dd>
-            <a
-              href="https://www.researchgate.net/profile/Antonios-Makris-2"
-              target="_blank" style="color: #00ccbb;"
-              >ResearchGate</a>
-          </dd>
-          <dd>
-            <a
-              href="https://orcid.org/my-orcid?orcid=0000-0003-0514-4292"
-              target="_blank" style="color: #46a35e;"
-              >Orcid</a>
-          </dd>
-          <dd>
-            <a
-              href="https://www.scopus.com/authid/detail.uri?authorId=57192161384"
-              target="_blank" style="color: #f36d21;;"
-              >Scopus</a>
-          </dd>
-          <dd>
-            <a href="https://github.com/AntonisMakris" target="_blank" style="color: #666666;">GitHub</a>
-          </dd>
-          <dd>
-            <a
-              href="https://stackoverflow.com/users/4132795/e7lt2p?tab=profile"
-              target="_blank" style="color: #4d4d4d;"
-              >stack<b>overflow</b></a>
-          </dd>
-          <dd>
-            <a
-              href="https://twitter.com/HT_Turambar"
-              target="_blank" style="color: #1d9bf0;"
-              >Twitter</a>
-          </dd>
+            <dd>
+                <a href="https://www.linkedin.com/in/antonios-makris-8a9253145/" target="_blank" style="color: #0a66c2;">LinkedIn</a>
+            </dd>
+            <dd>
+                <a
+                        href="https://scholar.google.com/citations?user=j5DZpL4AAAAJ&hl=el"
+                        target="_blank" target="_blank" style="color: #1a73e8;">Google Scholar</a>
+            </dd>
+            <dd>
+                <a
+                        href="https://www.researchgate.net/profile/Antonios-Makris-2"
+                        target="_blank" style="color: #00ccbb;"
+                >ResearchGate</a>
+            </dd>
+            <dd>
+                <a
+                        href="https://orcid.org/my-orcid?orcid=0000-0003-0514-4292"
+                        target="_blank" style="color: #46a35e;"
+                >Orcid</a>
+            </dd>
+            <dd>
+                <a
+                        href="https://www.scopus.com/authid/detail.uri?authorId=57192161384"
+                        target="_blank" style="color: #f36d21;;"
+                >Scopus</a>
+            </dd>
+            <dd>
+                <a href="https://github.com/AntonisMakris" target="_blank" style="color: #666666;">GitHub</a>
+            </dd>
+            <dd>
+                <a
+                        href="https://stackoverflow.com/users/4132795/e7lt2p?tab=profile"
+                        target="_blank" style="color: #4d4d4d;"
+                >stack<b>overflow</b></a>
+            </dd>
+            <dd>
+                <a
+                        href="https://twitter.com/HT_Turambar"
+                        target="_blank" style="color: #1d9bf0;"
+                >Twitter</a>
+            </dd>
         </div>
-      </div>
+    </div>
 
-      <div class="row">
+    <div class="row">
         <div class="col-md-10">
-          <h2 id="education">Education</h2>
+            <h2 id="education">Education</h2>
 
-          <strong>PhD in Distributed Systems</strong><br />
-          <p style="margin: 0; padding: 0;">
-            Harokopio University of Athens, Greece<br />
-            Thesis: A study on the query response time minimization in distributed (spatiotemporal) data stores [<a href="https://www.didaktorika.gr/eadd/handle/10442/51982" target="_blank">link</a>]
-          <p><i><small>Oct 2015 – July 2022</small></i></p>
-          </p>
+            <strong>PhD in Distributed Systems</strong><br />
+            <p style="margin: 0; padding: 0;">
+                Harokopio University of Athens, Greece<br />
+                Thesis: A study on the query response time minimization in distributed (spatiotemporal) data stores [<a href="https://www.didaktorika.gr/eadd/handle/10442/51982" target="_blank">link</a>]
+            <p><i><small>Oct 2015 – July 2022</small></i></p>
+            </p>
 
-          <strong>MSc in Web Engineering</strong><br />
-          <p style="margin: 0; padding: 0;">
-            Harokopio University of Athens, Greece<br />
-            Thesis: Implementation of function in R tool in parallel environment [<a href="https://arxiv.org/pdf/1905.06237.pdf" target="_blank">link</a>]
-          <p><i><small>Sep 2013 – July 2015</small></i></p>
-          </p>
+            <strong>MSc in Web Engineering</strong><br />
+            <p style="margin: 0; padding: 0;">
+                Harokopio University of Athens, Greece<br />
+                Thesis: Implementation of function in R tool in parallel environment [<a href="https://arxiv.org/pdf/1905.06237.pdf" target="_blank">link</a>]
+            <p><i><small>Sep 2013 – July 2015</small></i></p>
+            </p>
 
-          <strong>BSc in Informatics and Telematics</strong><br />
-          <p style="margin: 0; padding: 0;">
-              Harokopio University of Athens, Greece<br />
-            Thesis: Gadget recommendation and composition mechanism, in the environment of academic social network Unity, based on user experience
-          <p><i><small>Sep 2008 – Sep 2013</small></i></p>
-          </p>
+            <strong>BSc in Informatics and Telematics</strong><br />
+            <p style="margin: 0; padding: 0;">
+                Harokopio University of Athens, Greece<br />
+                Thesis: Gadget recommendation and composition mechanism, in the environment of academic social network Unity, based on user experience
+            <p><i><small>Sep 2008 – Sep 2013</small></i></p>
+            </p>
         </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="col-md-10">
+        <h2 id="experience">Experience</h2>
+
+        <strong>Personalization Script Engineer</strong><br />
+        <p>
+          CPI Card Group (remote), Mar 2020 – Present, Nashville, US
+          <br />
+          <i>
+            - Developed personalization system for production lines <br />
+            - Developed perso scripts for smart (IC) cards <br />
+            - Created documents and guides for key management and HSMs<br />
+          </i>
+        </p>
+
+        <strong>Senior Software Engineer</strong><br />
+        <p>
+          Nuesoft Technologies (remote), May 2017 – Oct 2018, Atlanta, US
+          <br />
+          <i>
+            - Designed a smart card certificate-as-a-service for
+            authentication<br />
+          </i>
+        </p>
+
+        <strong>Co-Founder & Chief Technology Officer</strong><br />
+        <p>
+          PKI Co., Nov 2010 – Aug 2016, Iran
+          <br />
+          <i>
+            - Designed and implemented PKI (Public Key Infrastructure)
+            systems<br />
+            - Consulted in HSM for banks and financial institutes<br />
+            - Designed a desktop card issuing and encoding system<br />
+            - Designed web and mobile middleware for smart card<br />
+          </i>
+        </p>
+
+        <strong>Senior Software Engineer</strong><br />
+        <p>
+          Matiran Co., Feb 2010 – Sep 2012, Iran
+          <br />
+          <i>
+            - Designed architecture of an ID card issuing system<br />
+            - Programmed card production machines<br />
+            - Performed acceptance test in different phases for card
+            production machines<br />
+          </i>
+        </p>
+
+        <strong>Software Engineer</strong><br />
+        <p>
+          SG Co., Jun 2005 – Feb 2010, Iran
+          <br />
+          <i>
+            - Developed a smart card scripting language compatible with
+            ISO-7816 and PC/SC with cryptography libraries<br />
+            - Programmed various HSM (Hardware Security Module)<br />
+            - Programmed Java Card chips<br />
+          </i>
+        </p>
       </div>
+    </div> -->
 
-      <!-- <div class="row">
+    <div class="row">
         <div class="col-md-10">
-          <h2 id="experience">Experience</h2>
+            <h2 id="projects">Research Projects</h2>
 
-          <strong>Personalization Script Engineer</strong><br />
-          <p>
-            CPI Card Group (remote), Mar 2020 – Present, Nashville, US
-            <br />
-            <i>
-              - Developed personalization system for production lines <br />
-              - Developed perso scripts for smart (IC) cards <br />
-              - Created documents and guides for key management and HSMs<br />
-            </i>
-          </p>
+            <h4>&#8618; Ongoing Projects </h4>
+            <ul>
+                <li>
+                    <a href="https://coevolution-project.eu/" target="_blank"><strong>CoEvolution (HE)</strong></a>
+                    <p style="margin: 0; padding: 0;">A Comprehensive Trustworthy Framework for Connected Machine Learning and Secure Interconnected Ai Solutions.</p>
+                    Role: Deputy Project Coordinator
+                    <p><i><small>Nov 2024 – Present</small></i></p>
+                </li>
 
-          <strong>Senior Software Engineer</strong><br />
-          <p>
-            Nuesoft Technologies (remote), May 2017 – Oct 2018, Atlanta, US
-            <br />
-            <i>
-              - Designed a smart card certificate-as-a-service for
-              authentication<br />
-            </i>
-          </p>
+                <li>
+                    <a href="https://musit-project.eu/" target="_blank"><strong>MUSIT (HORIZON-MSCA-2023)</strong></a>
+                    <p style="margin: 0; padding: 0;">MultiSensor Inferred Trajectories.</p>
+                    <p><i><small>Nov 2024 – Present</small></i></p>
+                </li>
 
-          <strong>Co-Founder & Chief Technology Officer</strong><br />
-          <p>
-            PKI Co., Nov 2010 – Aug 2016, Iran
-            <br />
-            <i>
-              - Designed and implemented PKI (Public Key Infrastructure)
-              systems<br />
-              - Consulted in HSM for banks and financial institutes<br />
-              - Designed a desktop card issuing and encoding system<br />
-              - Designed web and mobile middleware for smart card<br />
-            </i>
-          </p>
+            </ul>
 
-          <strong>Senior Software Engineer</strong><br />
-          <p>
-            Matiran Co., Feb 2010 – Sep 2012, Iran
-            <br />
-            <i>
-              - Designed architecture of an ID card issuing system<br />
-              - Programmed card production machines<br />
-              - Performed acceptance test in different phases for card
-              production machines<br />
-            </i>
-          </p>
+            <h4 style="color: #333; display: inline-block; margin-right: 5px;">&#8618;</h4>
+            <h4 class="clickable-header" id="pastProjectsHeader" style="color: #333; text-decoration-style: dotted; display: inline-block;">Past Projects</h4>
+            <ul class="hidden-list" id="pastProjectsList">
 
-          <strong>Software Engineer</strong><br />
-          <p>
-            SG Co., Jun 2005 – Feb 2010, Iran
-            <br />
-            <i>
-              - Developed a smart card scripting language compatible with
-              ISO-7816 and PC/SC with cryptography libraries<br />
-              - Programmed various HSM (Hardware Security Module)<br />
-              - Programmed Java Card chips<br />
-            </i>
-          </p>
-        </div>
-      </div> -->
+                <li class="project-item">
+                    <a href="https://www.charity-project.eu/" target="_blank"><strong>CHARITY (H2020)</strong></a>
+                    <p style="margin: 0; padding: 0;">CHARITY aspires to leverage the benefits of intelligent, autonomous orchestration of cloud, edge, and network resources, to create a symbiotic relationship between low and high latency infrastructures that will facilitate the needs of emerging applications.</p>
+                    <p><i><small>Jan 2021 – Jul 2024</small></i></p>
+                </li>
 
-      <div class="row">
-        <div class="col-md-10">
-          <h2 id="projects">Research Projects</h2>
+                <li class="project-item">
+                    <a href="https://www.smartship2020.eu/" target="_blank"><strong>SmartShip (H2020-MSCA-RISE-2018)</strong></a>
+                    <p style="margin: 0; padding: 0;">A data analytics, decision support and circular economy – based multi-layer optimization platform towards a holistic energy efficiency, fuel consumption and emissions management of vessels.</p>
+                    <p><i><small>May 2019 – Mar 2024</small></i></p>
+                </li>
 
-          <h4>&#8618; Ongoing Projects </h4>
-          <ul>
-              <li>
-                  <a href="#" onclick="return false;" target="_blank"><strong>CoEvolution (HE)</strong></a>
-                  <p style="margin: 0; padding: 0;">A Comprehensive Trustworthy Framework for Connected Machine Learning and Secure Interconnected Ai Solutions.</p>
-                <p><i><small>Sep 2024 – Present</small></i></p>
-              </li>
+                <li class="project-item">
+                    <a href="https://www.fns-cloud.eu/" target="_blank"><strong>FNS-Cloud (H2020)</strong></a>
+                    <p style="margin: 0; padding: 0;">Food Nutrition Security Cloud (FNS-Cloud) has launched the first ‘food cloud’, federating existing and emerging datasets, tools and services to support European research.</p>
+                    <p><i><small>Apr 2019 – June 2023</small></i></p>
+                </li>
 
-              <li>
-                  <a href="https://www.charity-project.eu/" target="_blank"><strong>CHARITY (H2020)</strong></a>
-                  <p style="margin: 0; padding: 0;">CHARITY aspires to leverage the benefits of intelligent, autonomous orchestration of cloud, edge, and network resources, to create a symbiotic relationship between low and high latency infrastructures that will facilitate the needs of emerging applications.</p>
-                  <p><i><small>Jan 2021 – Present</small></i></p>
-              </li>
+                <li class="project-item">
+                    <a href="http://83.212.240.62/" target="_blank"><strong>GLASSEAS (National funded ESPA 2019)</strong></a>
+                    <p style="margin: 0; padding: 0;">A global, distributed surveillance system for early detection and analysis of anomalous vessel trajectories.</p>
+                    <p><i><small>Apr 2019 – June 2020</small></i></p>
+                </li>
 
-              <li>
-                  <a href="https://www.smartship2020.eu/" target="_blank"><strong>SmartShip (H2020-MSCA-RISE-2018)</strong></a>
-                  <p style="margin: 0; padding: 0;">A data analytics, decision support and circular economy – based multi-layer optimization platform towards a holistic energy efficiency, fuel consumption and emissions management of vessels.</p>
-                  <p><i><small>May 2019 – Present</small></i></p>
-              </li>
-          </ul>
+                <li class="project-item">
+                    <a href="http://www.master-project-h2020.eu/" target="_blank"><strong>MASTER (H2020-MSCA-RISE-2017)</strong></a>
+                    <p style="margin: 0; padding: 0;">MASTER (Multiple ASpects TrajEctoRy management and analysis) is a project with the objective of forming an international and inter-sectoral network of organisations working on a joint research programme to define new methods to build, manage and analyse multiple aspects semantic trajectories.</p>
+                    <p><i><small>Mar 2018 – Dec 2023</small></i></p>
+                </li>
 
-          <h4 style="color: #333; display: inline-block; margin-right: 5px;">&#8618;</h4>
-          <h4 class="clickable-header" id="pastProjectsHeader" style="color: #333; text-decoration-style: dotted; display: inline-block;">Past Projects</h4>
-          <ul class="hidden-list" id="pastProjectsList">
-            <li class="project-item">
-                <a href="https://www.fns-cloud.eu/" target="_blank"><strong>FNS-Cloud (H2020)</strong></a>
-                <p style="margin: 0; padding: 0;">Food Nutrition Security Cloud (FNS-Cloud) has launched the first ‘food cloud’, federating existing and emerging datasets, tools and services to support European research.</p>
-               <p><i><small>Apr 2019 – June 2023</small></i></p>
-            </li>
+                <li class="project-item">
+                    <a href="https://productive40.eu/" target="_blank"><strong>Productive 4.0 (H2020)</strong></a>
+                    <p style="margin: 0; padding: 0;">Productive4.0 is an ambitious holistic innovation project, meant to open the doors to the potentials of Digital Industry and to maintain a leadership position of the industries in Europe. All partners involved will work on creating the capability to efficiently design and integrate hardware and software of Internet of Things (IoT) devices.</p>
+                    <p><i><small>May 2017 – Apr 2020</small></i></p>
+                </li>
 
-            <li class="project-item">
-                <a href="http://83.212.240.62/" target="_blank"><strong>GLASSEAS (National funded ESPA 2019)</strong></a>
-                <p style="margin: 0; padding: 0;">A global, distributed surveillance system for early detection and analysis of anomalous vessel trajectories.</p>
-                <p><i><small>Apr 2019 – June 2020</small></i></p>
-            </li>
+                <li class="project-item">
+                    <a href="#" onclick="return false;"><strong>Optimal (HUA internally-funded project)</strong></a>
+                    <p style="margin: 0; padding: 0;">Middleware development for the optimal replica placement in distributed key-value stores & fault tolerance techniques in infrastructures for large-scale data management.</p>
+                    <p><i><small>Dec 2016 – Dec 2017</small></i></p>
+                </li>
 
-            <li class="project-item">
-                <a href="http://www.master-project-h2020.eu/" target="_blank"><strong>MASTER (H2020-MSCA-RISE-2017)</strong></a>
-                <p style="margin: 0; padding: 0;">MASTER (Multiple ASpects TrajEctoRy management and analysis) is a project with the objective of forming an international and inter-sectoral network of organisations working on a joint research programme to define new methods to build, manage and analyse multiple aspects semantic trajectories.</p>
-                <p><i><small>Mar 2018 – Dec 2023</small></i></p>
-            </li>
+                <li class="project-item">
+                    <a href="#" onclick="return false;"><strong>Asylum Service Application (National funded)</strong></a>
+                    <p style="margin: 0; padding: 0;">Mobile Application for international applicants protection.</p>
+                    <p><i><small>Mar 2016 – May 2016</small></i></p>
+                </li>
 
-            <li class="project-item">
-                <a href="https://productive40.eu/" target="_blank"><strong>Productive 4.0 (H2020)</strong></a>
-                <p style="margin: 0; padding: 0;">Productive4.0 is an ambitious holistic innovation project, meant to open the doors to the potentials of Digital Industry and to maintain a leadership position of the industries in Europe. All partners involved will work on creating the capability to efficiently design and integrate hardware and software of Internet of Things (IoT) devices.</p>
-                <p><i><small>May 2017 – Apr 2020</small></i></p>
-            </li>
-
-            <li class="project-item">
-                <a href="#" onclick="return false;"><strong>Optimal (HUA internally-funded project)</strong></a>
-                <p style="margin: 0; padding: 0;">Middleware development for the optimal replica placement in distributed key-value stores & fault tolerance techniques in infrastructures for large-scale data management.</p>
-               <p><i><small>Dec 2016 – Dec 2017</small></i></p>
-            </li>
-
-            <li class="project-item">
-                <a href="#" onclick="return false;"><strong>Asylum Service Application (National funded)</strong></a>
-                <p style="margin: 0; padding: 0;">Mobile Application for international applicants protection.</p>
-                <p><i><small>Mar 2016 – May 2016</small></i></p>
-            </li>
-
-            <li class="project-item">
-                <a href="https://www.fortissimo-project.eu/en/success-stories/508/cloudbased-simulation-of-the-binding-capacities-of-target-drug-compounds" target="_blank"><strong>Fortissimo (FP7)</strong></a>
-                <p style="margin: 0; padding: 0;">Cloud-based simulation of the binding capacities of target drug.</p>
-               <p><i><small>Sep 2014 – May 2016</small></i></p>
-            </li>
-        </ul>
+                <li class="project-item">
+                    <a href="https://www.fortissimo-project.eu/en/success-stories/508/cloudbased-simulation-of-the-binding-capacities-of-target-drug-compounds" target="_blank"><strong>Fortissimo (FP7)</strong></a>
+                    <p style="margin: 0; padding: 0;">Cloud-based simulation of the binding capacities of target drug.</p>
+                    <p><i><small>Sep 2014 – May 2016</small></i></p>
+                </li>
+            </ul>
 
         </div>
-      </div>
+    </div>
 
-      <div class="row">
+    <div class="row">
         <div class="col-md-10">
-          <h2 id="publication">Publications</h2>
+            <h2 id="publication">Publications</h2>
 
-          <strong>Selected peer-reviewed papers</strong><br />
-          <ul>
-              
-            <li class="paper">
-              <a href="https://ieeexplore.ieee.org/document/10663442" target="_blank"
-                >Cross-Cluster Networking to Support Extended Reality Services.</a
-              >
-            Theodoropoulos, T., Rosa, L., Boudi, A., Benmerar, T. Z., Makris, A., Taleb, T., ... & Song, J. (2024)
-            IEEE Network.
-            </li>
+            <strong>Selected peer-reviewed papers</strong><br />
+            <ul>
 
-              
-             <li class="paper">
-              <a href="https://ieeexplore.ieee.org/abstract/document/10643928" target="_blank"
-                >Efficient Application Image Management in the Compute Continuum: A Vertex Cover Approach Based on the Think-Like-A-Vertex Paradigm.</a
-              >
-             Carlini, E., Dazzi, P., Makris, A., Mordacchini, M., Theodoropoulos, T., & Tserpes, K. (2024).
-             In 2024 IEEE 17th International Conference on Cloud Computing (CLOUD).
-            </li>
-              
-              <li class="paper">
-              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X24001353" target="_blank"
-                >Pro-active component image placement in Edge computing environments.</a
-              >
-              Makris, A., Psomakelis, E., Carlini, E., Mordacchini, M., Theodoropoulos, T., Dazzi, P., & Tserpes, K. (2024).
-              Future Generation Computer Systems.
-            </li>
-              
-            <li class="paper">
-              <a href="https://ieeexplore.ieee.org/abstract/document/10254749" target="_blank"
-              >Multi-Service Demand Forecasting Using Graph Neural Networks.</a
-              >
-              Theodoropoulos, T., Makris, A., Kontopoulos, I., Maroudis, A. C., & Tserpes, K. (2023, July).
-              In 2023 IEEE International Conference on Service-Oriented System Engineering (SOSE). (pp. 218-226). IEEE.
-            </li>
+                <li class="paper">
+                    <a href="https://ieeexplore.ieee.org/document/10663442" target="_blank"
+                    >Cross-Cluster Networking to Support Extended Reality Services.</a
+                    >
+                    Theodoropoulos, T., Rosa, L., Boudi, A., Benmerar, T. Z., Makris, A., Taleb, T., ... & Song, J. (2024)
+                    IEEE Network.
+                </li>
 
-            <li class="paper">
-              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10255001" target="_blank"
-                >GNOSIS: Proactive Image Placement Using Graph Neural Networks & Deep Reinforcement Learning.</a
-              >
-              Theodoropoulos, T., Makris, A., Psomakelis, E., Carlini, E., Mordacchini, M., Dazzi, P., & Tserpes, K. (2023, July).
-              In 2023 IEEE 16th International Conference on Cloud Computing (CLOUD) (pp. 120-128). IEEE.
-            </li>
-            <li class="paper">
-              <a href="https://www.sciencedirect.com/science/article/pii/S2667096823000058" target="_blank"
-                >Graph neural networks for representing multivariate resource usage: A multiplayer mobile gaming case-study.</a
-              >
-            Theodoropoulos, T., Makris, A., Kontopoulos, I., Violos, J., Tarkowski, P., Ledwoń, Z., ... & Tserpes, K. (2023).
-            International Journal of Information Management Data Insights, 3(1), 100158.
-            </li>
-      
-            <li class="paper">
-              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9466112" target="_blank"
-                >A comparison of trajectory compression algorithms over AIS data.</a
-              >
-              Makris, A., Kontopoulos, I., Alimisis, P., & Tserpes, K. (2021).
-              IEEE Access, 9, 92516-92530.
-            </li>
-         
-            <li class="paper">
-              <a href="https://link.springer.com/article/10.1007/s10707-020-00407-w" target="_blank"
-                >MongoDB Vs PostgreSQL: A comparative study on performance aspects.</a
-              >
-              Makris, A., Tserpes, K., Spiliopoulos, G., Zissis, D., & Anagnostopoulos, D. (2021).
-              GeoInformatica, 25, 243-268.
-            </li>
-            <li class="paper">
-              <a href="https://dl.acm.org/doi/pdf/10.1145/3411408.3411416" target="_blank"
-                >COVID-19 detection from chest X-Ray images using Deep Learning and Convolutional Neural Networks.</a
-              >
-            Makris, A., Kontopoulos, I., & Tserpes, K. (2020, September).
-            In 11th hellenic conference on artificial intelligence (pp. 60-66).
-            </li>
-            <li class="paper">
-              <a href="https://www.sciencedirect.com/science/article/pii/S0167739X1830058X" target="_blank"
-                >Parallelization of large-scale drug–protein binding experiments.</a
-              >
-              Michail, D., Makris, A., Varlamis, I., & Sawyer, M. (2019).
-              Future Generation Computer Systems, 97, 492-502.
-            </li>
-        
-            <li class="paper">
-              <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8258300" target="_blank"
-                >A novel object placement protocol for minimizing the average response time of get operations in distributed key-value stores.</a
-              >
-              Makris, A., Tserpes, K., & Anagnostopoulos, D. (2017, December).
-              In 2017 IEEE International Conference on Big Data (Big Data) (pp. 3196-3205). IEEE.
-            </li>
-            <li class="paper">
-              <a href="https://www.sciencedirect.com/science/article/pii/S1877050916321007" target="_blank"
-                >A classification of NoSQL data stores based on key design characteristics. </a
-              >
-              Makris, A., Tserpes, K., Andronikou, V., & Anagnostopoulos, D. (2016).
-              Procedia Computer Science, 97, 94-103.
-            </li>
-          </ul>
+
+                <li class="paper">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10643928" target="_blank"
+                    >Efficient Application Image Management in the Compute Continuum: A Vertex Cover Approach Based on the Think-Like-A-Vertex Paradigm.</a
+                    >
+                    Carlini, E., Dazzi, P., Makris, A., Mordacchini, M., Theodoropoulos, T., & Tserpes, K. (2024).
+                    In 2024 IEEE 17th International Conference on Cloud Computing (CLOUD).
+                </li>
+
+                <li class="paper">
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X24001353" target="_blank"
+                    >Pro-active component image placement in Edge computing environments.</a
+                    >
+                    Makris, A., Psomakelis, E., Carlini, E., Mordacchini, M., Theodoropoulos, T., Dazzi, P., & Tserpes, K. (2024).
+                    Future Generation Computer Systems.
+                </li>
+
+                <li class="paper">
+                    <a href="https://ieeexplore.ieee.org/abstract/document/10254749" target="_blank"
+                    >Multi-Service Demand Forecasting Using Graph Neural Networks.</a
+                    >
+                    Theodoropoulos, T., Makris, A., Kontopoulos, I., Maroudis, A. C., & Tserpes, K. (2023, July).
+                    In 2023 IEEE International Conference on Service-Oriented System Engineering (SOSE). (pp. 218-226). IEEE.
+                </li>
+
+                <li class="paper">
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10255001" target="_blank"
+                    >GNOSIS: Proactive Image Placement Using Graph Neural Networks & Deep Reinforcement Learning.</a
+                    >
+                    Theodoropoulos, T., Makris, A., Psomakelis, E., Carlini, E., Mordacchini, M., Dazzi, P., & Tserpes, K. (2023, July).
+                    In 2023 IEEE 16th International Conference on Cloud Computing (CLOUD) (pp. 120-128). IEEE.
+                </li>
+                <li class="paper">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S2667096823000058" target="_blank"
+                    >Graph neural networks for representing multivariate resource usage: A multiplayer mobile gaming case-study.</a
+                    >
+                    Theodoropoulos, T., Makris, A., Kontopoulos, I., Violos, J., Tarkowski, P., Ledwoń, Z., ... & Tserpes, K. (2023).
+                    International Journal of Information Management Data Insights, 3(1), 100158.
+                </li>
+
+                <li class="paper">
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9466112" target="_blank"
+                    >A comparison of trajectory compression algorithms over AIS data.</a
+                    >
+                    Makris, A., Kontopoulos, I., Alimisis, P., & Tserpes, K. (2021).
+                    IEEE Access, 9, 92516-92530.
+                </li>
+
+                <li class="paper">
+                    <a href="https://link.springer.com/article/10.1007/s10707-020-00407-w" target="_blank"
+                    >MongoDB Vs PostgreSQL: A comparative study on performance aspects.</a
+                    >
+                    Makris, A., Tserpes, K., Spiliopoulos, G., Zissis, D., & Anagnostopoulos, D. (2021).
+                    GeoInformatica, 25, 243-268.
+                </li>
+                <li class="paper">
+                    <a href="https://dl.acm.org/doi/pdf/10.1145/3411408.3411416" target="_blank"
+                    >COVID-19 detection from chest X-Ray images using Deep Learning and Convolutional Neural Networks.</a
+                    >
+                    Makris, A., Kontopoulos, I., & Tserpes, K. (2020, September).
+                    In 11th hellenic conference on artificial intelligence (pp. 60-66).
+                </li>
+                <li class="paper">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S0167739X1830058X" target="_blank"
+                    >Parallelization of large-scale drug–protein binding experiments.</a
+                    >
+                    Michail, D., Makris, A., Varlamis, I., & Sawyer, M. (2019).
+                    Future Generation Computer Systems, 97, 492-502.
+                </li>
+
+                <li class="paper">
+                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8258300" target="_blank"
+                    >A novel object placement protocol for minimizing the average response time of get operations in distributed key-value stores.</a
+                    >
+                    Makris, A., Tserpes, K., & Anagnostopoulos, D. (2017, December).
+                    In 2017 IEEE International Conference on Big Data (Big Data) (pp. 3196-3205). IEEE.
+                </li>
+                <li class="paper">
+                    <a href="https://www.sciencedirect.com/science/article/pii/S1877050916321007" target="_blank"
+                    >A classification of NoSQL data stores based on key design characteristics. </a
+                    >
+                    Makris, A., Tserpes, K., Andronikou, V., & Anagnostopoulos, D. (2016).
+                    Procedia Computer Science, 97, 94-103.
+                </li>
+            </ul>
         </div>
-      </div>
+    </div>
 
-      <br><br>
+    <br><br>
 
-      <div class="container">
+    <div class="container">
         <div class="row">
-          <div class="col-md-8">
-            <p><i>"Reality is created by the mind. We can change our reality by changing our mind."</i></p>
-          </div>
+            <div class="col-md-8">
+                <p><i>"Reality is created by the mind. We can change our reality by changing our mind."</i></p>
+            </div>
         </div>
-      </div>
+    </div>
 
 
-      <div class="row">
+    <div class="row">
         <div class="col-md-8"></div>
         <p align="right"><i><b><span id="lastUpdate"></span></b></i></p>
         <br />
         <br />
         <br />
-      </div>
     </div>
-    <!-- /.container -->
+</div>
+<!-- /.container -->
 
-    <script>
-      $(document).ready(function() {
+<script>
+    $(document).ready(function() {
         $('#pastProjectsHeader').click(function() {
-          $('#pastProjectsList').toggle();
+            $('#pastProjectsList').toggle();
         });
-      });
-    </script>
+    });
+</script>
 
 
-  </body>
+</body>
 </html>
