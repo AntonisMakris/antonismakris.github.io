@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <!--
     Plain-Academic by Vasilios Mavroudis
@@ -22,6 +23,7 @@
             rel="stylesheet"
             type="text/css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
 
     <script>
         window.onload = function() {
@@ -31,7 +33,24 @@
         };
     </script>
 
+    <style>
+        body{
+            background-color: #212529;
+            color: #f4f4f4;
+            font-family: 'Fira Code', monospace;
+        }
 
+        a {
+            color: #198751;  /* Apply green color to all links */
+            text-decoration: none; /* Optional: removes underline */
+        }
+
+        a:hover {
+            color: #145a38; /* Darker green on hover */
+            text-decoration: underline; /* Optional: adds underline on hover */
+        }
+
+    </style>
 
 </head>
 <!-- Custom CSS -->
@@ -55,22 +74,42 @@
     .project-item {
         margin-bottom: 15px;
     }
+
+    #blinkingCursor {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        color: lime; /* Neon green like a terminal */
+        font-family: 'Courier New', monospace;
+        animation: blink 1s infinite alternate;
+    }
+
+    @keyframes blink {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+    }
+
 </style>
 
 
 <body>
+<br><br>
+<div id="blinkingCursor">&gt;</div>
+
 <!-- Navigation -->
-<nav class="navbar navbar-inverse">
-    <div class="container">
-        <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <!-- <li><a href="#experience">Experience</a></li> -->
-            <li><a href="#publication">Publication</a></li>
-        </ul>
-    </div>
-</nav>
+<!--<nav class="navbar navbar-inverse">-->
+<!--    <div class="container">-->
+<!--        <ul class="nav navbar-nav">-->
+<!--            <li><a href="#">Home</a></li>-->
+<!--            <li><a href="#education">Education</a></li>-->
+<!--            <li><a href="#projects">Projects</a></li>-->
+<!--            &lt;!&ndash; <li><a href="#experience">Experience</a></li> &ndash;&gt;-->
+<!--            <li><a href="#publication">Publication</a></li>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--</nav>-->
 
 <!-- Page Content -->
 <div class="container">
@@ -90,9 +129,8 @@
                 </p>
                 <p>
                     I am currently a member of the <a href="https://github.com/Efficient-Computing-Lab" target="_blank"><b>Efficient Computing Lab</b></a>, specializing in Efficient Computing and Data Analytics.
-                    My main research interests include <i>Distributed Computing, Edge and Cloud Computing, Big Data
-                    Management and Analysis, Machine/Deep learning, NoSQL Database System, High Performance Computing (HPC),
-                    Spatiotemporal and Trajectory Analysis and Stream Processing</i>.
+                    My main research interests include <i>Distributed Computing, Edge and Cloud Computing, Machine/Deep learning, AI Robustness, Efficient Computing, Big Data
+                    Management and Analysis, and Spatiotemporal and Trajectory Analysis</i>.
                 </p>
                 <p>
                     I have participated in numerous EU funded and national projects.
@@ -135,33 +173,33 @@
                         target="_blank" style="color: #46a35e;"
                 >Orcid</a>
             </dd>
-            <dd>
-                <a
-                        href="https://www.scopus.com/authid/detail.uri?authorId=57192161384"
-                        target="_blank" style="color: #f36d21;;"
-                >Scopus</a>
-            </dd>
+<!--            <dd>-->
+<!--                <a-->
+<!--                        href="https://www.scopus.com/authid/detail.uri?authorId=57192161384"-->
+<!--                        target="_blank" style="color: #f36d21;;"-->
+<!--                >Scopus</a>-->
+<!--            </dd>-->
             <dd>
                 <a href="https://github.com/AntonisMakris" target="_blank" style="color: #666666;">GitHub</a>
             </dd>
             <dd>
                 <a
                         href="https://stackoverflow.com/users/4132795/e7lt2p?tab=profile"
-                        target="_blank" style="color: #4d4d4d;"
+                        target="_blank" style="color: #e7700d;"
                 >stack<b>overflow</b></a>
             </dd>
-            <dd>
-                <a
-                        href="https://twitter.com/HT_Turambar"
-                        target="_blank" style="color: #1d9bf0;"
-                >Twitter</a>
-            </dd>
+<!--            <dd>-->
+<!--                <a-->
+<!--                        href="https://twitter.com/HT_Turambar"-->
+<!--                        target="_blank" style="color: #1d9bf0;"-->
+<!--                >Twitter</a>-->
+<!--            </dd>-->
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-10">
-            <h2 id="education">Education</h2>
+            <h2 id="education" style="color: #ffc107">Education</h2>
 
             <strong>PhD in Distributed Systems</strong><br />
             <p style="margin: 0; padding: 0;">
@@ -252,13 +290,13 @@
 
     <div class="row">
         <div class="col-md-10">
-            <h2 id="projects">Research Projects</h2>
+            <h2 id="projects" style="color: #ffc107">Research Projects</h2>
 
             <h4>&#8618; Ongoing Projects </h4>
             <ul>
                 <li>
                     <a href="https://coevolution-project.eu/" target="_blank"><strong>CoEvolution (HE)</strong></a>
-                    <p style="margin: 0; padding: 0;">A Comprehensive Trustworthy Framework for Connected Machine Learning and Secure Interconnected Ai Solutions.</p>
+                    <p style="margin: 0; padding: 0;">A Comprehensive Trustworthy Framework for Connected Machine Learning and Secure Interconnected AI Solutions.</p>
                     Role: Deputy Project Coordinator
                     <p><i><small>Nov 2024 – Present</small></i></p>
                 </li>
@@ -271,8 +309,8 @@
 
             </ul>
 
-            <h4 style="color: #333; display: inline-block; margin-right: 5px;">&#8618;</h4>
-            <h4 class="clickable-header" id="pastProjectsHeader" style="color: #333; text-decoration-style: dotted; display: inline-block;">Past Projects</h4>
+            <h4 style="color: #f4f4f4; display: inline-block; margin-right: 5px;">&#8618;</h4>
+            <h4 class="clickable-header" id="pastProjectsHeader" style="color: #f4f4f4; text-decoration-style: dotted; display: inline-block;">Past Projects</h4>
             <ul class="hidden-list" id="pastProjectsList">
 
                 <li class="project-item">
@@ -335,7 +373,7 @@
 
     <div class="row">
         <div class="col-md-10">
-            <h2 id="publication">Publications</h2>
+            <h2 id="publication" style="color: #ffc107">Publications</h2>
 
             <strong>Selected peer-reviewed papers</strong><br />
             <ul>
