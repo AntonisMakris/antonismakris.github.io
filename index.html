@@ -50,6 +50,51 @@
             text-decoration: underline; /* Optional: adds underline on hover */
         }
 
+        .pub-entry {
+      padding: 12px 0;
+      border-bottom: 1px solid #444;
+    }
+
+    .pub-badge-conference {
+      display: inline-block;
+      background-color: #0d6efd; /* blue */
+      color: white;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      margin-right: 8px;
+    }
+
+    .pub-badge-journal {
+      display: inline-block;
+      background-color: #28a745; /* green */
+      color: white;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      margin-right: 8px;
+    }
+
+    .pub-entry a {
+      color: #198754;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .pub-entry a:hover {
+      text-decoration: underline;
+    }
+
+    .pub-authors {
+      color: #ccc;
+      margin-top: 3px;
+    }
+
+    .pub-selected {
+      color: #ff6b6b;
+      font-weight: bold;
+    }
+
     </style>
 
 </head>
@@ -383,6 +428,7 @@
         </div>
     </div>
 
+    <!--
     <div class="row">
         <div class="col-md-10">
             <h2 id="publication" style="color: #ffc107">Publications</h2>
@@ -486,7 +532,157 @@
                 </li>
             </ul>
         </div>
+    </div> -->
+      <div class="row">
+    <div class="col-md-10">
+      <h2 id="publication" style="color: #ffc107">Publications</h2>
+
+      <strong>Selected peer-reviewed papers</strong><br /><br />
+
+
+      <!-- 1 -->
+      <div class="pub-entry">
+        <span class="pub-badge-conference">conference</span>
+        <a href="https://arxiv.org/abs/2508.18060" target="_blank">
+          FedGreed: A Byzantine-Robust Loss-Based Aggregation Method for Federated Learning
+        </a>
+        <div class="pub-authors">
+          Kritharakis, E., <strong class="pub-selected">Makris, A.</strong>, Jakovetic, D., & Tserpes, K. (2025).
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="pub-entry">
+        <span class="pub-badge-journal">journal</span>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0167739X25002213" target="_blank">
+          GraphOpticon: A Global proactive horizontal autoscaler for improved service performance & resource consumption
+        </a>
+        <div class="pub-authors">
+          Theodoropoulos, T., Patel, Y. S., Zdun, U., Townend, P., Korontanis, I.,
+          <strong class="pub-selected">Makris, A.</strong>, & Tserpes, K. (2026). Future Generation Computer Systems.
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="pub-entry">
+        <span class="pub-badge-journal">journal</span>
+        <a href="https://ieeexplore.ieee.org/document/10663442" target="_blank">
+          Cross-Cluster Networking to Support Extended Reality Services
+        </a>
+        <div class="pub-authors">
+          Theodoropoulos, T., Rosa, L., Boudi, A., Benmerar, T. Z.,
+          <strong class="pub-selected">Makris, A.</strong>, Taleb, T., ... & Song, J. (2024). IEEE Network.
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="pub-entry">
+        <span class="pub-badge-conference">conference</span>
+        <a href="https://ieeexplore.ieee.org/abstract/document/10643928" target="_blank">
+          Efficient Application Image Management in the Compute Continuum: A Vertex Cover Approach Based on the Think-Like-A-Vertex Paradigm
+        </a>
+        <div class="pub-authors">
+          Carlini, E., Dazzi, P., <strong class="pub-selected">Makris, A.</strong>, Mordacchini, M., Theodoropoulos, T., & Tserpes, K. (2024).
+          IEEE CLOUD 2024.
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="pub-entry">
+        <span class="pub-badge-journal">journal</span>
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X24001353" target="_blank">
+          Pro-active component image placement in Edge computing environments
+        </a>
+        <div class="pub-authors">
+          <strong class="pub-selected">Makris, A.</strong>, Psomakelis, E., Carlini, E., Mordacchini, M., Theodoropoulos, T., Dazzi, P., & Tserpes, K. (2024).
+          Future Generation Computer Systems.
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="pub-entry">
+        <span class="pub-badge-conference">conference</span>
+        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10255001" target="_blank">
+          GNOSIS: Proactive Image Placement Using Graph Neural Networks & Deep Reinforcement Learning
+        </a>
+        <div class="pub-authors">
+          Theodoropoulos, T., <strong class="pub-selected">Makris, A.</strong>, Psomakelis, E., Carlini, E., Mordacchini, M., Dazzi, P., & Tserpes, K. (2023).
+          IEEE CLOUD 2023.
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="pub-entry">
+        <span class="pub-badge-journal">journal</span>
+        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9466112" target="_blank">
+          A comparison of trajectory compression algorithms over AIS data
+        </a>
+        <div class="pub-authors">
+          <strong class="pub-selected">Makris, A.</strong>, Kontopoulos, I., Alimisis, P., & Tserpes, K. (2021).
+          IEEE Access.
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="pub-entry">
+        <span class="pub-badge-journal">journal</span>
+        <a href="https://link.springer.com/article/10.1007/s10707-020-00407-w" target="_blank">
+          MongoDB Vs PostgreSQL: A comparative study on performance aspects
+        </a>
+        <div class="pub-authors">
+          <strong class="pub-selected">Makris, A.</strong>, Tserpes, K., Spiliopoulos, G., Zissis, D., & Anagnostopoulos, D. (2021). GeoInformatica.
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="pub-entry">
+        <span class="pub-badge-conference">conference</span>
+        <a href="https://dl.acm.org/doi/pdf/10.1145/3411408.3411416" target="_blank">
+          COVID-19 detection from chest X-Ray images using Deep Learning and Convolutional Neural Networks
+        </a>
+        <div class="pub-authors">
+          <strong class="pub-selected">Makris, A.</strong>, Kontopoulos, I., & Tserpes, K. (2020).
+          Hellenic Conference on Artificial Intelligence.
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="pub-entry">
+        <span class="pub-badge-journal">journal</span>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0167739X1830058X" target="_blank">
+          Parallelization of large-scale drug–protein binding experiments
+        </a>
+        <div class="pub-authors">
+          Michail, D., <strong class="pub-selected">Makris, A.</strong>, Varlamis, I., & Sawyer, M. (2019).
+          Future Generation Computer Systems.
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="pub-entry">
+        <span class="pub-badge-conference">conference</span>
+        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8258300" target="_blank">
+          A novel object placement protocol for minimizing the average response time of get operations in distributed key-value stores
+        </a>
+        <div class="pub-authors">
+          <strong class="pub-selected">Makris, A.</strong>, Tserpes, K., & Anagnostopoulos, D. (2017).
+          IEEE Big Data.
+        </div>
+      </div>
+
+      <!-- 12 -->
+      <div class="pub-entry">
+        <span class="pub-badge-journal">journal</span>
+        <a href="https://www.sciencedirect.com/science/article/pii/S1877050916321007" target="_blank">
+          A classification of NoSQL data stores based on key design characteristics
+        </a>
+        <div class="pub-authors">
+          <strong class="pub-selected">Makris, A.</strong>, Tserpes, K., Andronikou, V., & Anagnostopoulos, D. (2016).
+          Procedia Computer Science.
+        </div>
+      </div>
     </div>
+  </div>
 
     <br><br>
 
