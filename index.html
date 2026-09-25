@@ -1,738 +1,481 @@
-
-
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the  Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
 <head>
-    <title>Antonios Makris</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js"></script>
-    <link
-            href="https://fonts.googleapis.com/css?family=Oswald:700"
-            rel="stylesheet"
-            type="text/css"
-    />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8" />
+<title>Antonios Makris</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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Lw4WRZHLCI4M1jKdshugxu2mm3xqHEzT7Ha73333XafTEUKBhMbRLUY2ilJGddXNquaOZexNCfMRxiqghD7QbDalecky5BynisJCMcwV2Z4/9/v9MAxBd9kPpt3iflQnvghVXski2S8SbUKqEwVEkI2dh36/v76+rkrzFJWwJnVr/U0HnoqiaDabu7u733zzDVjGrttyuWS8krJbSei/OjvFjrKM5wCAruuShHS6d999l2lYZHeoq7qxAO6pqrV55Rkrx3Hee++9w8PD8XjMqUoUB/4FH2Xrm4z68+gNIqnniGSy42JRlngmE3CSJJi+XC4vLi4QNmlw77zzDiOOqvhe0SzYRe31enfv3n3w4AG9TIRyFBTbtullrC1JEtwpFSwHPITN42wRD9UqyvN8fX292+0ykFxcXOzv7x8fH//4448IjI1Go91uf/bZZ/fv31d1jasXQF7qur67u3t6erq3tyejJmAiEVC3qYUpqMfEyTHZ2ONeQX31BAj87/Dw8Ozs7Pvvvz86OhoOh8vlkppxHGcwGHz77bcfffQRE8hfppDgV57nvu9/8skncRw/efJEUhCur24/roie6o8yl8pJZEIhExx1TE4/evToq6++Go1GHJWUEElI2UplbhZr/wdAbNLF3aUIggAAAABJRU5ErkJggg==">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <script>
-        window.onload = function() {
-            var lastModifiedDate = document.lastModified;
-            var lastUpdateElement = document.getElementById('lastUpdate');
-            lastUpdateElement.innerHTML = "Last Updated: " + lastModifiedDate;
-        };
-    </script>
+  <script>
+    window.onload = function() {
+      var lastModifiedDate = document.lastModified;
+      var lastUpdateElement = document.getElementById('lastUpdate');
+      lastUpdateElement.innerHTML = "Last Updated: " + lastModifiedDate;
+    };
+  </script>
 
-    <style>
-        body{
-            background-color: #212529;
-            color: #f4f4f4;
-            font-family: 'Fira Code', monospace;
-        }
 
-        a {
-            color: #198751;  /* Apply green color to all links */
-            text-decoration: none; /* Optional: removes underline */
-        }
-
-        a:hover {
-            color: #145a38; /* Darker green on hover */
-            text-decoration: underline; /* Optional: adds underline on hover */
-        }
-
-        .pub-entry {
-            padding: 12px 0;
-            border-bottom: 1px solid #444;
-        }
-
-        .pub-badge-conference {
-            display: inline-block;
-            background-color: #0d6efd; /* blue */
-            color: white;
-            padding: 2px 8px;
-            border-radius: 6px;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-
-        .pub-badge-journal {
-            display: inline-block;
-            background-color: #28a745; /* green */
-            color: white;
-            padding: 2px 8px;
-            border-radius: 6px;
-            font-size: 12px;
-            margin-right: 8px;
-        }
-
-        .pub-entry a {
-            color: #198754;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-        .pub-entry a:hover {
-            text-decoration: underline;
-        }
-
-        .pub-authors {
-            color: #ccc;
-            margin-top: 3px;
-        }
-
-        .pub-selected {
-            color: #ff6b6b;
-            font-weight: bold;
-        }
-
-    </style>
-
-</head>
-<!-- Custom CSS -->
 <style>
-    /* Style for the clickable header */
-    .clickable-header {
-        cursor: pointer;
-        color: blue;
-        text-decoration: underline;
-    }
+  :root{
+    --bg:#0a0e14;
+    --panel:#0d1219;
+    --panel-2:#10161f;
+    --border:#1c2530;
+    --border-soft:#161d27;
+    --text:#c7d1de;
+    --text-dim:#5e6b80;
+    --text-dimmer:#3c4757;
+    --blue:#6ea8fe;
+    --green:#7ee787;
+    --purple:#c297ff;
+    --amber:#ffb86c;
+    --pink:#ff7ab6;
+    --red:#ff6b6b;
+    --radius:6px;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:70px;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Fira Code', ui-monospace, Menlo, Consolas, monospace;
+    font-size:14.5px;
+    line-height:1.7;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    background-image:
+      linear-gradient(var(--border-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+    background-size:48px 48px;
+    opacity:.35;
+    pointer-events:none;
+    z-index:0;
+  }
+  a{ color:var(--blue); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  ::selection{ background:var(--blue); color:#08101f; }
 
-    /* Initially hide the content of the list */
-    .hidden-list {
-        padding: 0;
-        margin: 0;
-        display: none;
-        padding-left: 40px; /* Adjust the indentation as needed */
-    }
+  /* ---------- window chrome ---------- */
+  .titlebar{
+    position:sticky; top:env(safe-area-inset-top,0px); z-index:10;
+    background:var(--panel);
+    border-bottom:1px solid var(--border);
+    display:flex; align-items:center;
+    padding:10px 16px;
+    gap:14px;
+    backdrop-filter:blur(6px);
+  }
+  .dots{ display:flex; gap:7px; flex:0 0 auto; }
+  .dots span{ width:11px; height:11px; border-radius:50%; display:block; }
+  .dots span:nth-child(1){ background:#ff5f56; }
+  .dots span:nth-child(2){ background:#ffbd2e; }
+  .dots span:nth-child(3){ background:#27c93f; }
+  .titlepath{ color:var(--text-dim); font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .titlepath b{ color:var(--text); font-weight:500; }
+  .tabs{ margin-left:auto; display:flex; gap:2px; }
+  .tabs a{
+    color:var(--text-dim); font-size:12.5px; padding:6px 12px;
+    border-radius:6px 6px 0 0; border:1px solid transparent;
+  }
+  .tabs a:hover{ color:var(--text); text-decoration:none; }
+  .tabs a.active{ color:var(--green); background:var(--bg); border-color:var(--border); border-bottom-color:var(--bg); }
+  @media (max-width:720px){ .tabs{ display:none; } }
 
-    /* Style for list items */
-    .project-item {
-        margin-bottom: 15px;
-    }
+  /* ---------- layout ---------- */
+  .wrap{ position:relative; z-index:1; max-width:980px; margin:0 auto; padding:40px 20px 32px; display:grid; grid-template-columns:230px 1fr; gap:36px; }
+  @media (max-width:800px){ .wrap{ grid-template-columns:1fr; } }
 
-    #blinkingCursor {
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        font-size: 30px;
-        font-weight: bold;
-        color: lime; /* Neon green like a terminal */
-        font-family: 'Courier New', monospace;
-        animation: blink 1s infinite alternate;
-    }
+  /* ---------- sidebar ---------- */
+  aside{ position:relative; }
+  @media (min-width:801px){ aside{ position:sticky; top:64px; align-self:start; } }
+  .avatar{
+    width:76px; height:76px; border-radius:var(--radius);
+    background:linear-gradient(160deg, #131b26, #0a0e14);
+    border:1px solid var(--border);
+    display:flex; align-items:center; justify-content:center;
+    font-size:22px; font-weight:700; color:var(--green);
+    margin-bottom:16px;
+    overflow:hidden;
+    padding:0;
+  }
+  .avatar img{
+    width:100%; height:100%; object-fit:cover; display:block;
+    filter:grayscale(15%);
+  }
+  .avatar span{ opacity:.55; color:var(--text-dim); font-size:13px; margin-left:2px;}
+  .name{ font-size:19px; font-weight:700; color:#eef2f7; margin:0 0 2px; }
+  .cursor{ display:inline-block; width:8px; height:16px; background:var(--green); vertical-align:-2px; margin-left:3px; animation:blink 1.05s steps(1) infinite; }
+  @keyframes blink{ 50%{ opacity:0; } }
+  .role{ color:var(--text-dim); font-size:12.5px; margin:0 0 20px; }
 
-    @keyframes blink {
-        0% { opacity: 1; }
-        100% { opacity: 0; }
-    }
+  .kv{ font-size:12.5px; margin-bottom:22px; }
+  .kv .k{ color:var(--purple); }
+  .kv .punct{ color:var(--text-dimmer); }
+  .kv .s{ color:var(--green); }
+  .kv-line{ padding:2px 0; word-break:break-word; }
 
-    .img-responsive {
-        border-radius: 8px; /* Soft rounded corners */
-        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Light, elegant shadow */
-    }
+  .linklist{ list-style:none; margin:0 0 22px; padding:0; font-size:12.5px; }
+  .linklist li{ padding:0; }
+  .linklist a{
+    display:flex; align-items:center; gap:9px;
+    padding:6px 4px; border-radius:5px;
+    color:var(--text);
+    transition:background .12s, color .12s;
+  }
+  .linklist a:hover{ background:var(--panel); color:var(--blue); text-decoration:none; }
+  .linklist .icon{
+    flex:0 0 auto; width:16px; height:16px; display:inline-flex; align-items:center; justify-content:center;
+    color:var(--text-dim);
+  }
+  .linklist a:hover .icon{ color:var(--blue); }
+  .linklist .icon svg{ width:16px; height:16px; fill:currentColor; }
 
+  .navlist{ list-style:none; margin:0; padding:12px 0 0; border-top:1px solid var(--border); font-size:12.5px; }
+  .navlist a{ color:var(--text-dim); }
+  .navlist a:hover{ color:var(--text); }
+  .navlist li{ padding:5px 0; }
+  .navlist .hash{ color:var(--text-dimmer); }
 
+  /* ---------- main ---------- */
+  main{ min-width:0; }
+  section{ margin-bottom:52px; scroll-margin-top:70px; }
+  section:last-of-type{ margin-bottom:0; }
+  .filename{
+    display:flex; align-items:baseline; gap:10px;
+    font-size:12.5px; color:var(--text-dimmer);
+    margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--border);
+  }
+  .filename b{ color:var(--text-dim); font-weight:500; }
+  .comment{ color:var(--text-dim); }
+  .heading{ font-size:20px; color:#eef2f7; font-weight:700; margin:0 0 16px; }
+  .heading .comment{ display:block; font-size:12.5px; font-weight:400; color:var(--text-dim); margin-bottom:6px; }
+
+  p.body-text{ color:var(--text); margin:0 0 14px; max-width:74ch; }
+  p.body-text a{ color:var(--green); }
+
+  /* project cards */
+  .proj{
+    border:1px solid var(--border); background:var(--panel);
+    border-radius:var(--radius); padding:16px 18px; margin-bottom:12px;
+  }
+  .proj-top{ display:flex; flex-wrap:wrap; align-items:baseline; gap:10px; margin-bottom:6px; }
+  .proj-name{ color:var(--blue); font-weight:600; font-size:14.5px; }
+  .proj-tag{ font-size:11px; color:var(--amber); border:1px solid var(--border); padding:1px 7px; border-radius:4px; }
+  .proj-desc{ color:var(--text); font-size:13px; margin:6px 0 8px; max-width:70ch; }
+  .proj-meta{ font-size:12px; color:var(--text-dim); }
+  .proj-meta .role{ color:var(--purple); margin:0 8px 0 0; display:inline; }
+
+  details.pastwrap{ margin-top:18px; }
+  details.pastwrap > summary{
+    cursor:pointer; list-style:none;
+    display:flex; align-items:center; gap:10px;
+    padding:12px 16px;
+    background:var(--panel-2);
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    color:var(--blue);
+    font-size:13px;
+    font-weight:600;
+    transition:background .12s, border-color .12s;
+  }
+  details.pastwrap > summary:hover{
+    background:var(--panel);
+    border-color:var(--blue);
+    text-decoration:none;
+  }
+  details.pastwrap > summary::-webkit-details-marker{ display:none; }
+  details.pastwrap > summary::before{
+    content:"▸";
+    color:var(--blue);
+    transition:transform .15s;
+    font-size:11px;
+  }
+  details.pastwrap[open] > summary::before{ content:"▾"; }
+  details.pastwrap[open] > summary{
+    border-radius:var(--radius) var(--radius) 0 0;
+    border-bottom:1px solid var(--border);
+  }
+  .past-count{
+    color:var(--bg); background:var(--amber);
+    font-size:11px; font-weight:700;
+    padding:1px 8px; border-radius:10px;
+    margin-left:auto;
+  }
+  details.pastwrap[open] > .pastbody{
+    border:1px solid var(--border); border-top:none;
+    border-radius:0 0 var(--radius) var(--radius);
+    padding:16px 16px 4px;
+    background:rgba(255,255,255,0.01);
+  }
+
+  /* publications */
+  .pub{
+    border-left:2px solid var(--border); padding:4px 0 4px 16px; margin-bottom:16px;
+  }
+  .pub:hover{ border-left-color:var(--blue); }
+  .badge{
+    font-size:10.5px; padding:1px 7px; border-radius:4px; margin-right:8px;
+    border:1px solid var(--border);
+  }
+  .badge.conf{ color:var(--blue); }
+  .badge.jour{ color:var(--green); }
+  .pub-title{ color:var(--text); font-weight:500; font-size:13.5px; }
+  .pub-title:hover{ color:var(--blue); }
+  .pub-authors{ color:var(--text-dim); font-size:12px; margin-top:4px; }
+  .pub-authors .me{ color:var(--purple); }
+
+  footer{
+    max-width:980px; margin:0 auto; padding:18px 20px 32px; position:relative; z-index:1;
+    color:var(--text-dimmer); font-size:12px;
+    border-top:1px solid var(--border);
+  }
+  footer .quote{ color:var(--text-dim); font-style:normal; margin:0; }
+  footer .quote::before, footer .quote::after{ content:"\""; color:var(--text-dimmer); }
 </style>
-
-
+</head>
 <body>
-<br><br>
-<div id="blinkingCursor">&gt;</div>
 
-<!-- Navigation -->
-<!--<nav class="navbar navbar-inverse">-->
-<!--    <div class="container">-->
-<!--        <ul class="nav navbar-nav">-->
-<!--            <li><a href="#">Home</a></li>-->
-<!--            <li><a href="#education">Education</a></li>-->
-<!--            <li><a href="#projects">Projects</a></li>-->
-<!--            &lt;!&ndash; <li><a href="#experience">Experience</a></li> &ndash;&gt;-->
-<!--            <li><a href="#publication">Publication</a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-<!--</nav>-->
-
-<!-- Page Content  -->
-<div class="container">
-    <div class="row">
-        <!-- Entries Column -->
-        <div class="col-md-8">
-            <!-- Main Image -->
-            <img class="img-responsive" src="makris.png" alt="" width="120" height="120" /><br />
-
-            <div style="margin-top: 3%; text-align: justify">
-                <p>
-                    I am currently a Senior Researcher at the <a href="https://www.ece.ntua.gr/en" target="_blank">School of Electrical and Computer Engineering</a>, National Technical University of Athens, advised by
-                    <a href="https://ecl.ece.ntua.gr/team/konstantinos-tserpes" target="_blank">Prof. Konsantinos Tserpes</a>.
-                    I received a BSc Degree in Computer Science in 2013 and an MSc Degree in Web Engineering in 2015, both from
-                    Harokopio University of Athens. In 2022, I completed my PhD in the area of Distributed Systems at the same
-                    department.
-                </p>
-                <p>
-                    I am currently a member of the <a href="https://ecl.ece.ntua.gr/" target="_blank"><b>Efficient Computing Lab</b></a>, specializing in Efficient Computing and Data Analytics <<a href="https://github.com/Efficient-Computing-Lab" target="_blank"><b>Github</b></a>>.
-                    My main research interests include <i>Distributed Computing, Edge and Cloud Computing, Machine/Deep learning, AI Robustness, Efficient Computing, Big Data
-                    Management and Analysis, and Spatiotemporal and Trajectory Analysis</i>.
-                </p>
-                <p>
-                    I have participated in numerous EU funded and national projects.
-                </p>
-            </div>
-        </div>
-
-        <!-- Contact Info on the Sidebar -->
-        <div class="col-md-4">
-            <div style="font-family: 'Oswald', sans-serif; font-size: 32px">
-                <b>Antonios Makris</b>
-            </div>
-            <br />
-            <p>
-                <b>antoniosmakris [at] mail [dot] ntua [dot] gr</b><br />
-            </p>
-
-        </div>
-
-        <!-- Links on the Sidebar -->
-        <div class="col-md-4" style="margin-top: 2%">
-
-            <dd>
-                <a href="https://www.linkedin.com/in/antonios-makris-8a9253145/" target="_blank" style="color: #0a66c2;">LinkedIn</a>
-            </dd>
-            <dd>
-                <a
-                        href="https://scholar.google.com/citations?user=j5DZpL4AAAAJ&hl=el"
-                        target="_blank" target="_blank" style="color: #1a73e8;">Google Scholar</a>
-            </dd>
-            <dd>
-                <a
-                        href="https://www.researchgate.net/profile/Antonios-Makris-2"
-                        target="_blank" style="color: #00ccbb;"
-                >ResearchGate</a>
-            </dd>
-            <dd>
-                <a
-                        href="https://orcid.org/my-orcid?orcid=0000-0003-0514-4292"
-                        target="_blank" style="color: #46a35e;"
-                >Orcid</a>
-            </dd>
-            <!--            <dd>-->
-            <!--                <a-->
-            <!--                        href="https://www.scopus.com/authid/detail.uri?authorId=57192161384"-->
-            <!--                        target="_blank" style="color: #f36d21;;"-->
-            <!--                >Scopus</a>-->
-            <!--            </dd>-->
-            <dd>
-                <a href="https://github.com/AntonisMakris" target="_blank" style="color: #666666;">GitHub</a>
-            </dd>
-            <dd>
-                <a
-                        href="https://stackoverflow.com/users/4132795/e7lt2p?tab=profile"
-                        target="_blank" style="color: #e7700d;"
-                >stack<b>overflow</b></a>
-            </dd>
-            <!--            <dd>-->
-            <!--                <a-->
-            <!--                        href="https://twitter.com/HT_Turambar"-->
-            <!--                        target="_blank" style="color: #1d9bf0;"-->
-            <!--                >Twitter</a>-->
-            <!--            </dd>-->
-        </div>
-    </div>
-
-    <!--    <div class="row">-->
-    <!--        <div class="col-md-10">-->
-    <!--            <h2 id="education" style="color: #ffc107">Education</h2>-->
-
-    <!--            <strong>PhD in Distributed Systems</strong><br />-->
-    <!--            <p style="margin: 0; padding: 0;">-->
-    <!--                Harokopio University of Athens, Greece<br />-->
-    <!--                Thesis: A study on the query response time minimization in distributed (spatiotemporal) data stores [<a href="https://www.didaktorika.gr/eadd/handle/10442/51982" target="_blank">link</a>]-->
-    <!--            <p><i><small>Oct 2015 – July 2022</small></i></p>-->
-    <!--            </p>-->
-
-    <!--            <strong>MSc in Web Engineering</strong><br />-->
-    <!--            <p style="margin: 0; padding: 0;">-->
-    <!--                Harokopio University of Athens, Greece<br />-->
-    <!--                Thesis: Implementation of function in R tool in parallel environment [<a href="https://arxiv.org/pdf/1905.06237.pdf" target="_blank">link</a>]-->
-    <!--            <p><i><small>Sep 2013 – July 2015</small></i></p>-->
-    <!--            </p>-->
-
-    <!--            <strong>BSc in Informatics and Telematics</strong><br />-->
-    <!--            <p style="margin: 0; padding: 0;">-->
-    <!--                Harokopio University of Athens, Greece<br />-->
-    <!--                Thesis: Gadget recommendation and composition mechanism, in the environment of academic social network Unity, based on user experience-->
-    <!--            <p><i><small>Sep 2008 – Sep 2013</small></i></p>-->
-    <!--            </p>-->
-    <!--        </div>-->
-    <!--    </div>-->
-
-    <!-- <div class="row">
-      <div class="col-md-10">
-        <h2 id="experience">Experience</h2>
-
-        <strong>Personalization Script Engineer</strong><br />
-        <p>
-          CPI Card Group (remote), Mar 2020 – Present, Nashville, US
-          <br />
-          <i>
-            - Developed personalization system for production lines <br />
-            - Developed perso scripts for smart (IC) cards <br />
-            - Created documents and guides for key management and HSMs<br />
-          </i>
-        </p>
-
-        <strong>Senior Software Engineer</strong><br />
-        <p>
-          Nuesoft Technologies (remote), May 2017 – Oct 2018, Atlanta, US
-          <br />
-          <i>
-            - Designed a smart card certificate-as-a-service for
-            authentication<br />
-          </i>
-        </p>
-
-        <strong>Co-Founder & Chief Technology Officer</strong><br />
-        <p>
-          PKI Co., Nov 2010 – Aug 2016, Iran
-          <br />
-          <i>
-            - Designed and implemented PKI (Public Key Infrastructure)
-            systems<br />
-            - Consulted in HSM for banks and financial institutes<br />
-            - Designed a desktop card issuing and encoding system<br />
-            - Designed web and mobile middleware for smart card<br />
-          </i>
-        </p>
-
-        <strong>Senior Software Engineer</strong><br />
-        <p>
-          Matiran Co., Feb 2010 – Sep 2012, Iran
-          <br />
-          <i>
-            - Designed architecture of an ID card issuing system<br />
-            - Programmed card production machines<br />
-            - Performed acceptance test in different phases for card
-            production machines<br />
-          </i>
-        </p>
-
-        <strong>Software Engineer</strong><br />
-        <p>
-          SG Co., Jun 2005 – Feb 2010, Iran
-          <br />
-          <i>
-            - Developed a smart card scripting language compatible with
-            ISO-7816 and PC/SC with cryptography libraries<br />
-            - Programmed various HSM (Hardware Security Module)<br />
-            - Programmed Java Card chips<br />
-          </i>
-        </p>
-      </div>
-    </div> -->
-
-    <div class="row">
-        <div class="col-md-10">
-            <h2 id="projects" style="color: #ffc107">Research Projects</h2>
-
-            <h4>&#8618; Ongoing Projects </h4>
-            <ul>
-                <li>
-                    <a href="https://coevolution-project.eu/" target="_blank"><strong>CoEvolution (HE)</strong></a>
-                    <p style="margin: 0; padding: 0;">A Comprehensive Trustworthy Framework for Connected Machine Learning and Secure Interconnected AI Solutions.</p>
-                    Role: Project Coordinator
-                    <p><i><small>Nov 2024 – Present</small></i></p>
-                </li>
-                <li>
-                    <a href="https://turing-project.eu/" target="_blank"><strong>TURING (HE)</strong></a>
-                    <p style="margin: 0; padding: 0;">Trustworthy unified robust intelligent generative systems.</p>
-                    Role: Researcher in Adversarial Robustness of Foundation Models
-                    <p><i><small>Sep 2025 – Present</small></i></p>
-                </li>
-                <li>
-                    <a href="https://musit-project.eu/" target="_blank"><strong>MUSIT (HORIZON-MSCA-2023)</strong></a>
-                    <p style="margin: 0; padding: 0;">MultiSensor Inferred Trajectories.</p>
-                    Role: Experienced Researcher Secondee
-                    <p><i><small>Nov 2024 – Present</small></i></p>
-                </li>
-
-            </ul>
-
-            <h4 style="color: #f4f4f4; display: inline-block; margin-right: 5px;">&#8618;</h4>
-            <h4 class="clickable-header" id="pastProjectsHeader" style="color: #f4f4f4; text-decoration-style: dotted; display: inline-block;">Past Projects</h4>
-            <ul class="hidden-list" id="pastProjectsList">
-
-                <li class="project-item">
-                    <a href="https://www.charity-project.eu/" target="_blank"><strong>CHARITY (H2020)</strong></a>
-                    <p style="margin: 0; padding: 0;">CHARITY aspires to leverage the benefits of intelligent, autonomous orchestration of cloud, edge, and network resources, to create a symbiotic relationship between low and high latency infrastructures that will facilitate the needs of emerging applications.</p>
-                    <p><i><small>Jan 2021 – Jul 2024</small></i></p>
-                </li>
-
-                <li class="project-item">
-                    <a href="https://www.smartship2020.eu/" target="_blank"><strong>SmartShip (H2020-MSCA-RISE-2018)</strong></a>
-                    <p style="margin: 0; padding: 0;">A data analytics, decision support and circular economy – based multi-layer optimization platform towards a holistic energy efficiency, fuel consumption and emissions management of vessels.</p>
-                    <p><i><small>May 2019 – Mar 2024</small></i></p>
-                </li>
-
-                <li class="project-item">
-                    <a href="https://www.fns-cloud.eu/" target="_blank"><strong>FNS-Cloud (H2020)</strong></a>
-                    <p style="margin: 0; padding: 0;">Food Nutrition Security Cloud (FNS-Cloud) has launched the first ‘food cloud’, federating existing and emerging datasets, tools and services to support European research.</p>
-                    <p><i><small>Apr 2019 – June 2023</small></i></p>
-                </li>
-
-                <li class="project-item">
-                    <a href="http://83.212.240.62/" target="_blank"><strong>GLASSEAS (National funded ESPA 2019)</strong></a>
-                    <p style="margin: 0; padding: 0;">A global, distributed surveillance system for early detection and analysis of anomalous vessel trajectories.</p>
-                    <p><i><small>Apr 2019 – June 2020</small></i></p>
-                </li>
-
-                <li class="project-item">
-                    <a href="http://www.master-project-h2020.eu/" target="_blank"><strong>MASTER (H2020-MSCA-RISE-2017)</strong></a>
-                    <p style="margin: 0; padding: 0;">MASTER (Multiple ASpects TrajEctoRy management and analysis) is a project with the objective of forming an international and inter-sectoral network of organisations working on a joint research programme to define new methods to build, manage and analyse multiple aspects semantic trajectories.</p>
-                    <p><i><small>Mar 2018 – Dec 2023</small></i></p>
-                </li>
-
-                <li class="project-item">
-                    <a href="https://productive40.eu/" target="_blank"><strong>Productive 4.0 (H2020)</strong></a>
-                    <p style="margin: 0; padding: 0;">Productive4.0 is an ambitious holistic innovation project, meant to open the doors to the potentials of Digital Industry and to maintain a leadership position of the industries in Europe. All partners involved will work on creating the capability to efficiently design and integrate hardware and software of Internet of Things (IoT) devices.</p>
-                    <p><i><small>May 2017 – Apr 2020</small></i></p>
-                </li>
-
-                <li class="project-item">
-                    <a href="#" onclick="return false;"><strong>Optimal (HUA internally-funded project)</strong></a>
-                    <p style="margin: 0; padding: 0;">Middleware development for the optimal replica placement in distributed key-value stores & fault tolerance techniques in infrastructures for large-scale data management.</p>
-                    <p><i><small>Dec 2016 – Dec 2017</small></i></p>
-                </li>
-
-                <li class="project-item">
-                    <a href="#" onclick="return false;"><strong>Asylum Service Application (National funded)</strong></a>
-                    <p style="margin: 0; padding: 0;">Mobile Application for international applicants protection.</p>
-                    <p><i><small>Mar 2016 – May 2016</small></i></p>
-                </li>
-
-                <li class="project-item">
-                    <a href="https://www.fortissimo-project.eu/en/success-stories/508/cloudbased-simulation-of-the-binding-capacities-of-target-drug-compounds" target="_blank"><strong>Fortissimo (FP7)</strong></a>
-                    <p style="margin: 0; padding: 0;">Cloud-based simulation of the binding capacities of target drug.</p>
-                    <p><i><small>Sep 2014 – May 2016</small></i></p>
-                </li>
-            </ul>
-
-        </div>
-    </div>
-
-    <!--
-    <div class="row">
-        <div class="col-md-10">
-            <h2 id="publication" style="color: #ffc107">Publications</h2>
-
-            <strong>Selected peer-reviewed papers</strong><br /><br />
-            <ul>
-
-                <li class="paper">
-                    <a href="https://arxiv.org/pdf/2607.09787" target="_blank"
-                    >Adversarially Guided Diffusion for LiDAR Range Image Synthesis.</a
-                    >
-                    Bouras, S., Makris, A., Gkillas, A., Lalos, A. S., & Tserpes, K. (September 2026). Adversarially Guided Diffusion for LiDAR Range Image Synthesis. In Joint European Conference on Machine Learning and Knowledge Discovery in Databases (ECML-PKDD).
-                </li>
-
-                <li class="paper">
-                    <a href="https://arxiv.org/abs/2508.18060" target="_blank"
-                    >FedGreed: A Byzantine-Robust Loss-Based Aggregation Method for Federated Learning.</a
-                    >
-                    Kritharakis, E., Jakovetic, D., Makris, A., & Tserpes, K. (2025, September). Robust federated learning under adversarial attacks via loss-based client clustering. In Joint European Conference on Machine Learning and Knowledge Discovery in Databases (ECML-PKDD).
-                </li>
-
-                <li class="paper">
-                    <a href="https://www.sciencedirect.com/science/article/pii/S0167739X25002213" target="_blank"
-                    >GraphOpticon: A Global proactive horizontal autoscaler for improved service performance & resource consumption.</a
-                    >
-                    Theodoropoulos, T., Patel, Y. S., Zdun, U., Townend, P., Korontanis, I., Makris, A., & Tserpes, K. (2026)
-                    Future Generation Computer Systems.
-                </li>
-
-
-
-                <li class="paper">
-                    <a href="https://ieeexplore.ieee.org/document/10663442" target="_blank"
-                    >Cross-Cluster Networking to Support Extended Reality Services.</a
-                    >
-                    Theodoropoulos, T., Rosa, L., Boudi, A., Benmerar, T. Z., Makris, A., Taleb, T., ... & Song, J. (2024).
-                    IEEE Network.
-                </li>
-                <li class="paper">
-                    <a href="https://ieeexplore.ieee.org/abstract/document/10643928" target="_blank"
-                    >Efficient Application Image Management in the Compute Continuum: A Vertex Cover Approach Based on the Think-Like-A-Vertex Paradigm.</a
-                    >
-                    Carlini, E., Dazzi, P., Makris, A., Mordacchini, M., Theodoropoulos, T., & Tserpes, K. (2024).
-                    In 2024 IEEE 17th International Conference on Cloud Computing (CLOUD).
-                </li>
-
-                <li class="paper">
-                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X24001353" target="_blank"
-                    >Pro-active component image placement in Edge computing environments.</a
-                    >
-                    Makris, A., Psomakelis, E., Carlini, E., Mordacchini, M., Theodoropoulos, T., Dazzi, P., & Tserpes, K. (2024).
-                    Future Generation Computer Systems.
-                </li>
-
-
-                <li class="paper">
-                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10255001" target="_blank"
-                    >GNOSIS: Proactive Image Placement Using Graph Neural Networks & Deep Reinforcement Learning.</a
-                    >
-                    Theodoropoulos, T., Makris, A., Psomakelis, E., Carlini, E., Mordacchini, M., Dazzi, P., & Tserpes, K. (2023).
-                    In 2023 IEEE 16th International Conference on Cloud Computing (CLOUD) (pp. 120-128). IEEE.
-                </li>
-
-
-                <li class="paper">
-                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9466112" target="_blank"
-                    >A comparison of trajectory compression algorithms over AIS data.</a
-                    >
-                    Makris, A., Kontopoulos, I., Alimisis, P., & Tserpes, K. (2021).
-                    IEEE Access, 9, 92516-92530.
-                </li>
-
-                 <li class="paper">
-                    <a href="https://link.springer.com/article/10.1007/s10707-020-00407-w" target="_blank"
-                    >MongoDB Vs PostgreSQL: A comparative study on performance aspects.</a
-                    >
-                    Makris, A., Tserpes, K., Spiliopoulos, G., Zissis, D., & Anagnostopoulos, D. (2021).
-                    GeoInformatica, 25, 243-268.
-                </li>
-                 <li class="paper">
-                    <a href="https://dl.acm.org/doi/pdf/10.1145/3411408.3411416" target="_blank"
-                    >COVID-19 detection from chest X-Ray images using Deep Learning and Convolutional Neural Networks.</a
-                    >
-                    Makris, A., Kontopoulos, I., & Tserpes, K. (2020, September).
-                    In 11th hellenic conference on artificial intelligence (pp. 60-66).
-                </li>
-                <li class="paper">
-                    <a href="https://www.sciencedirect.com/science/article/pii/S0167739X1830058X" target="_blank"
-                    >Parallelization of large-scale drug–protein binding experiments.</a
-                    >
-                    Michail, D., Makris, A., Varlamis, I., & Sawyer, M. (2019).
-                    Future Generation Computer Systems, 97, 492-502.
-                </li>
-
-                <li class="paper">
-                    <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8258300" target="_blank"
-                    >A novel object placement protocol for minimizing the average response time of get operations in distributed key-value stores.</a
-                    >
-                    Makris, A., Tserpes, K., & Anagnostopoulos, D. (2017, December).
-                    In 2017 IEEE International Conference on Big Data (Big Data) (pp. 3196-3205). IEEE.
-                </li>
-                <li class="paper">
-                    <a href="https://www.sciencedirect.com/science/article/pii/S1877050916321007" target="_blank"
-                    >A classification of NoSQL data stores based on key design characteristics. </a
-                    >
-                    Makris, A., Tserpes, K., Andronikou, V., & Anagnostopoulos, D. (2016).
-                    Procedia Computer Science, 97, 94-103.
-                </li>
-            </ul>
-        </div>
-    </div> -->
-    <div class="row">
-        <div class="col-md-10">
-            <h2 id="publication" style="color: #ffc107">Publications</h2>
-
-            <strong>Selected peer-reviewed papers</strong><br /><br />
-
-
-            <!-- 1 -->
-            <div class="pub-entry">
-                <span class="pub-badge-conference">conference</span>
-                <a href="https://arxiv.org/pdf/2607.09787" target="_blank">
-                    Adversarially Guided Diffusion for LiDAR Range Image Synthesis
-                </a>
-                <div class="pub-authors">
-                    Bouras, S.,  <strong class="pub-selected">Makris, A.</strong>, Gkillas, A., Lalos, A. S., & Tserpes, K. (2026).
-                    In Joint European Conference on Machine Learning and Knowledge Discovery in Databases (ECML-PKDD).
-                </div>
-            </div>
-
-            <!-- 1 -->
-            <div class="pub-entry">
-                <span class="pub-badge-conference">conference</span>
-                <a href="https://link.springer.com/chapter/10.1007/978-3-032-19102-1_31" target="_blank">
-                    Robust federated learning under adversarial attacks via loss-based client clustering
-                </a>
-                <div class="pub-authors">
-                    Kritharakis, E., Jakovetic, D.,  <strong class="pub-selected">Makris, A.</strong>, & Tserpes, K. (2025).
-                    In Joint European Conference on Machine Learning and Knowledge Discovery in Databases (ECML-PKDD).
-                </div>
-            </div>
-
-            <!-- 2 -->
-            <div class="pub-entry">
-                <span class="pub-badge-journal">journal</span>
-                <a href="https://www.sciencedirect.com/science/article/pii/S0167739X25002213" target="_blank">
-                    GraphOpticon: A Global proactive horizontal autoscaler for improved service performance & resource consumption
-                </a>
-                <div class="pub-authors">
-                    Theodoropoulos, T., Patel, Y. S., Zdun, U., Townend, P., Korontanis, I.,
-                    <strong class="pub-selected">Makris, A.</strong>, & Tserpes, K. (2026). Future Generation Computer Systems.
-                </div>
-            </div>
-
-            <!-- 3 -->
-            <div class="pub-entry">
-                <span class="pub-badge-journal">journal</span>
-                <a href="https://ieeexplore.ieee.org/document/10663442" target="_blank">
-                    Cross-Cluster Networking to Support Extended Reality Services
-                </a>
-                <div class="pub-authors">
-                    Theodoropoulos, T., Rosa, L., Boudi, A., Benmerar, T. Z.,
-                    <strong class="pub-selected">Makris, A.</strong>, Taleb, T., ... & Song, J. (2024). IEEE Network.
-                </div>
-            </div>
-
-<!--            &lt;!&ndash; 4 &ndash;&gt;-->
-<!--            <div class="pub-entry">-->
-<!--                <span class="pub-badge-conference">conference</span>-->
-<!--                <a href="https://ieeexplore.ieee.org/abstract/document/10643928" target="_blank">-->
-<!--                    Efficient Application Image Management in the Compute Continuum: A Vertex Cover Approach Based on the Think-Like-A-Vertex Paradigm-->
-<!--                </a>-->
-<!--                <div class="pub-authors">-->
-<!--                    Carlini, E., Dazzi, P., <strong class="pub-selected">Makris, A.</strong>, Mordacchini, M., Theodoropoulos, T., & Tserpes, K. (2024).-->
-<!--                    IEEE CLOUD 2024.-->
-<!--                </div>-->
-<!--            </div>-->
-
-            <!-- 5 -->
-            <div class="pub-entry">
-                <span class="pub-badge-journal">journal</span>
-                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X24001353" target="_blank">
-                    Pro-active component image placement in Edge computing environments
-                </a>
-                <div class="pub-authors">
-                    <strong class="pub-selected">Makris, A.</strong>, Psomakelis, E., Carlini, E., Mordacchini, M., Theodoropoulos, T., Dazzi, P., & Tserpes, K. (2024).
-                    Future Generation Computer Systems.
-                </div>
-            </div>
-
-            <!-- 6 -->
-            <div class="pub-entry">
-                <span class="pub-badge-conference">conference</span>
-                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10255001" target="_blank">
-                    GNOSIS: Proactive Image Placement Using Graph Neural Networks & Deep Reinforcement Learning
-                </a>
-                <div class="pub-authors">
-                    Theodoropoulos, T., <strong class="pub-selected">Makris, A.</strong>, Psomakelis, E., Carlini, E., Mordacchini, M., Dazzi, P., & Tserpes, K. (2023).
-                    IEEE CLOUD 2023.
-                </div>
-            </div>
-
-            <!-- 7 -->
-            <div class="pub-entry">
-                <span class="pub-badge-journal">journal</span>
-                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9466112" target="_blank">
-                    A comparison of trajectory compression algorithms over AIS data
-                </a>
-                <div class="pub-authors">
-                    <strong class="pub-selected">Makris, A.</strong>, Kontopoulos, I., Alimisis, P., & Tserpes, K. (2021).
-                    IEEE Access.
-                </div>
-            </div>
-
-            <!-- 8 -->
-            <div class="pub-entry">
-                <span class="pub-badge-journal">journal</span>
-                <a href="https://link.springer.com/article/10.1007/s10707-020-00407-w" target="_blank">
-                    MongoDB Vs PostgreSQL: A comparative study on performance aspects
-                </a>
-                <div class="pub-authors">
-                    <strong class="pub-selected">Makris, A.</strong>, Tserpes, K., Spiliopoulos, G., Zissis, D., & Anagnostopoulos, D. (2021). GeoInformatica.
-                </div>
-            </div>
-
-<!--            &lt;!&ndash; 9 &ndash;&gt;-->
-<!--            <div class="pub-entry">-->
-<!--                <span class="pub-badge-conference">conference</span>-->
-<!--                <a href="https://dl.acm.org/doi/pdf/10.1145/3411408.3411416" target="_blank">-->
-<!--                    COVID-19 detection from chest X-Ray images using Deep Learning and Convolutional Neural Networks-->
-<!--                </a>-->
-<!--                <div class="pub-authors">-->
-<!--                    <strong class="pub-selected">Makris, A.</strong>, Kontopoulos, I., & Tserpes, K. (2020).-->
-<!--                    Hellenic Conference on Artificial Intelligence.-->
-<!--                </div>-->
-<!--            </div>-->
-
-            <!-- 10 -->
-            <div class="pub-entry">
-                <span class="pub-badge-journal">journal</span>
-                <a href="https://www.sciencedirect.com/science/article/pii/S0167739X1830058X" target="_blank">
-                    Parallelization of large-scale drug–protein binding experiments
-                </a>
-                <div class="pub-authors">
-                    Michail, D., <strong class="pub-selected">Makris, A.</strong>, Varlamis, I., & Sawyer, M. (2019).
-                    Future Generation Computer Systems.
-                </div>
-            </div>
-
-            <!-- 11 -->
-            <div class="pub-entry">
-                <span class="pub-badge-conference">conference</span>
-                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8258300" target="_blank">
-                    A novel object placement protocol for minimizing the average response time of get operations in distributed key-value stores
-                </a>
-                <div class="pub-authors">
-                    <strong class="pub-selected">Makris, A.</strong>, Tserpes, K., & Anagnostopoulos, D. (2017).
-                    IEEE Big Data.
-                </div>
-            </div>
-
-            <!-- 12 -->
-            <div class="pub-entry">
-                <span class="pub-badge-journal">journal</span>
-                <a href="https://www.sciencedirect.com/science/article/pii/S1877050916321007" target="_blank">
-                    A classification of NoSQL data stores based on key design characteristics
-                </a>
-                <div class="pub-authors">
-                    <strong class="pub-selected">Makris, A.</strong>, Tserpes, K., Andronikou, V., & Anagnostopoulos, D. (2016).
-                    Procedia Computer Science.
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br><br>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <p><i>"Reality is created by the mind. We can change our reality by changing our mind."</i></p>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-md-8"></div>
-        <p align="right"><i><b><span id="lastUpdate"></span></b></i></p>
-        <br />
-        <br />
-        <br />
-    </div>
+<div class="titlebar">
+<!--  <div class="dots"><span></span><span></span><span></span></div>-->
+<!--  <div class="titlepath"><b>makris@ntua</b>:~/research$</div>-->
+  <nav class="tabs">
+    <a href="#about" class="active">about</a>
+    <a href="#projects">projects</a>
+    <a href="#publications">publications</a>
+  </nav>
 </div>
-<!-- /.container -->
 
-<script>
-    $(document).ready(function() {
-        $('#pastProjectsHeader').click(function() {
-            $('#pastProjectsList').toggle();
-        });
-    });
-</script>
+<div class="wrap">
+  <aside>
+    <div class="avatar"><img src="data:image/png;base64,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" alt="Antonios Makris"></div>
+    <p class="name">Antonios Makris<span class="cursor"></span></p>
+<!--    <p class="role">Senior Researcher · NTUA</p>-->
 
+    <div class="kv">
+      <div class="kv-line"><span class="k">email</span><span class="punct">:</span> <span class="s">antoniosmakris [at] mail [dot] ntua [dot] gr</span></div>
+    </div>
+
+    <ul class="linklist">
+      <li><a href="https://www.linkedin.com/in/antonios-makris-8a9253145/" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>LinkedIn</a></li>
+      <li><a href="https://scholar.google.com/citations?user=j5DZpL4AAAAJ&hl=el" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24"><path d="M12 2 1 9l4 2.5v7L12 22l7-3.5v-7l2-1.25V16h1.5V9L12 2zm0 2.36L18.82 9 12 13.15 5.18 9 12 4.36zM6.5 13.5l4.72 2.95a1.5 1.5 0 0 0 1.56 0l4.72-2.95v3.85L12 20.15l-5.5-2.8v-3.85z"/></svg></span>Google Scholar</a></li>
+      <li><a href="https://www.researchgate.net/profile/Antonios-Makris-2" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24"><path d="M19.586 0c-.818 0-1.508.19-2.073.565a3.606 3.606 0 0 0-1.278 1.44 6.55 6.55 0 0 0-.523 1.436c-.129.585-.279 1.545-.279 2.05v.028c-.09.58-.402.906-1.115.906h-.887v2.17h1.744v9.775c0 .29-.083.483-.297.483-.155 0-.336-.07-.336-.07l-.27 1.98s.605.28 1.394.28c1.37 0 2.147-.847 2.147-2.42V8.595h1.89v-2.17h-1.89v-.303c0-.395.093-.996.28-1.51.185-.507.51-.913 1.1-.913.395 0 .68.14.83.28l.63-1.812a2.99 2.99 0 0 0-1.067-.167zM7.994 6.996C4.85 6.996 2 9.278 2 12.54c0 3.15 2.652 5.545 5.905 5.545.99 0 1.897-.222 2.686-.62l3.02 2.79.99-1.073-2.91-2.688a5.34 5.34 0 0 0 1.19-3.395c0-3.28-2.788-5.103-4.887-5.103zm0 1.746c1.518 0 3.13 1.21 3.13 3.34 0 2.17-1.647 3.406-3.13 3.406-1.61 0-3.294-1.22-3.294-3.42 0-2.16 1.65-3.326 3.294-3.326z"/></svg></span>ResearchGate</a></li>
+      <li><a href="https://orcid.org/my-orcid?orcid=0000-0003-0514-4292" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.807 0 1.457.652 1.457 1.459 0 .806-.65 1.458-1.457 1.458-.808 0-1.459-.652-1.459-1.458 0-.807.651-1.459 1.459-1.459zm-1.093 3.694h2.186v11.499H6.276V8.072zm3.981 0h4.323c4.108 0 5.914 2.936 5.914 5.756 0 3.067-2.398 5.75-5.907 5.75h-4.33V8.072zm2.186 1.968v7.55h1.981c3.06 0 4.204-2.259 4.204-3.782 0-2.046-1.301-3.768-4.279-3.768h-1.906z"/></svg></span>ORCID</a></li>
+      <li><a href="https://github.com/AntonisMakris" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55 0-.27-.01-1.16-.02-2.11-3.2.7-3.88-1.35-3.88-1.35-.52-1.34-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.51-1.47.11-3.07 0 0 .97-.31 3.18 1.18a11.02 11.02 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.6.24 2.78.12 3.07.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.27 5.67.42.36.78 1.07.78 2.17 0 1.56-.02 2.83-.02 3.21 0 .3.21.66.8.55A10.53 10.53 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg></span>GitHub</a></li>
+      <li><a href="https://stackoverflow.com/users/4132795/e7lt2p?tab=profile" target="_blank" rel="noopener"><span class="icon"><svg viewBox="0 0 24 24"><path d="M17.36 20.2v-5.38h1.79V22H3.64v-7.18h1.79v5.38h11.93zM7.2 14.3l.37-1.76 8.82 1.85-.37 1.75-8.82-1.84zm1.16-4.2.76-1.63 8.2 3.82-.76 1.63-8.2-3.82zm2.28-4.02L11.9 4.6l7.04 5.87-1.26 1.5-7.04-5.87zM7.02 18.08v-1.8h9.08v1.8H7.02zM15.68 0l-1.44 1.07 5.5 7.39 1.44-1.07L15.68 0z"/></svg></span>Stack Overflow</a></li>
+    </ul>
+
+    <ul class="navlist">
+      <li><a href="#about"><span class="hash">#</span> about</a></li>
+      <li><a href="#projects"><span class="hash">#</span> projects</a></li>
+      <li><a href="#publications"><span class="hash">#</span> publications</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section id="about">
+      <div class="filename"><b>profile</b> <span class="comment"></span></div>
+      <h1 class="heading"><span class="comment"></span>Bio</h1>
+      <p class="body-text">
+        I am currently a Senior Researcher at the <a href="https://www.ece.ntua.gr/en" target="_blank" rel="noopener">School of Electrical and Computer Engineering</a>, National Technical University of Athens, advised by <a href="https://ecl.ece.ntua.gr/team/konstantinos-tserpes" target="_blank" rel="noopener">Prof. Konstantinos Tserpes</a>. I received a BSc in Computer Science in 2013 and an MSc in Web Engineering in 2015, both from Harokopio University of Athens. In 2022 I completed my PhD in Distributed Systems at the same department.
+      </p>
+      <p class="body-text">
+        I am a member of the <a href="https://ecl.ece.ntua.gr/" target="_blank" rel="noopener">Efficient Computing Lab</a>, specializing in efficient computing and data analytics (<a href="https://github.com/Efficient-Computing-Lab" target="_blank" rel="noopener">GitHub</a>). My research interests span distributed computing, edge and cloud computing, machine and deep learning, AI robustness, efficient computing, big data management and analysis, and spatiotemporal / trajectory analysis.
+      </p>
+      <p class="body-text">
+        I have participated in numerous EU-funded and national research projects.
+      </p>
+    </section>
+
+    <section id="projects">
+      <div class="filename"><b>research projects</b> <span class="comment"></span></div>
+      <h1 class="heading"><span class="comment"></span>Ongoing Projects</h1>
+
+
+      <div class="proj">
+        <div class="proj-top"><a class="proj-name" href="#" target="_blank" rel="noopener">f-inference</a><span class="proj-tag">HE</span></div>
+        <p class="proj-desc">Efficient Foundation Model Inference Across the Computing Continuum.</p>
+        <div class="proj-meta"><span class="role">Project Coordinator</span>Oct 2026 – Present</div>
+      </div>
+
+
+      <div class="proj">
+        <div class="proj-top"><a class="proj-name" href="https://coevolution-project.eu/" target="_blank" rel="noopener">CoEvolution</a><span class="proj-tag">HE</span></div>
+        <p class="proj-desc">A comprehensive trustworthy framework for connected machine learning and secure interconnected AI solutions.</p>
+        <div class="proj-meta"><span class="role">Project Coordinator</span>Nov 2024 – Present</div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top"><a class="proj-name" href="https://turing-project.eu/" target="_blank" rel="noopener">TURING</a><span class="proj-tag">HE</span></div>
+        <p class="proj-desc">Trustworthy unified robust intelligent generative systems.</p>
+        <div class="proj-meta"><span class="role">Researcher — Adversarial Robustness of Foundation Models</span>Sep 2025 – Present</div>
+      </div>
+
+      <div class="proj">
+        <div class="proj-top"><a class="proj-name" href="https://musit-project.eu/" target="_blank" rel="noopener">MUSIT</a><span class="proj-tag">HORIZON-MSCA-2023</span></div>
+        <p class="proj-desc">MultiSensor Inferred Trajectories.</p>
+        <div class="proj-meta"><span class="role">Experienced Researcher Secondee</span>Nov 2024 – Present</div>
+      </div>
+
+      <details class="pastwrap">
+        <summary>Past projects <span class="past-count">9</span></summary>
+        <div class="pastbody">
+
+        <div class="proj">
+          <div class="proj-top"><a class="proj-name" href="https://www.charity-project.eu/" target="_blank" rel="noopener">CHARITY</a><span class="proj-tag">H2020</span></div>
+          <p class="proj-desc">Intelligent, autonomous orchestration of cloud, edge and network resources, creating a symbiotic relationship between low- and high-latency infrastructures for emerging applications.</p>
+          <div class="proj-meta">Jan 2021 – Jul 2024</div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top"><a class="proj-name" href="https://www.smartship2020.eu/" target="_blank" rel="noopener">SmartShip</a><span class="proj-tag">H2020-MSCA-RISE-2018</span></div>
+          <p class="proj-desc">A data analytics, decision support and circular-economy multi-layer optimization platform for holistic energy efficiency, fuel consumption and emissions management of vessels.</p>
+          <div class="proj-meta">May 2019 – Mar 2024</div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top"><a class="proj-name" href="https://www.fns-cloud.eu/" target="_blank" rel="noopener">FNS-Cloud</a><span class="proj-tag">H2020</span></div>
+          <p class="proj-desc">Food Nutrition Security Cloud — federating datasets, tools and services to support European nutrition research.</p>
+          <div class="proj-meta">Apr 2019 – Jun 2023</div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top"><a class="proj-name" href="http://83.212.240.62/" target="_blank" rel="noopener">GLASSEAS</a><span class="proj-tag">National — ESPA 2019</span></div>
+          <p class="proj-desc">A global, distributed surveillance system for early detection and analysis of anomalous vessel trajectories.</p>
+          <div class="proj-meta">Apr 2019 – Jun 2020</div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top"><a class="proj-name" href="http://www.master-project-h2020.eu/" target="_blank" rel="noopener">MASTER</a><span class="proj-tag">H2020-MSCA-RISE-2017</span></div>
+          <p class="proj-desc">Multiple ASpects TrajEctoRy management and analysis — an international, inter-sectoral network defining methods to build, manage and analyse multiple-aspect semantic trajectories.</p>
+          <div class="proj-meta">Mar 2018 – Dec 2023</div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top"><a class="proj-name" href="https://productive40.eu/" target="_blank" rel="noopener">Productive 4.0</a><span class="proj-tag">H2020</span></div>
+          <p class="proj-desc">A holistic innovation project building the capability to efficiently design and integrate hardware and software for IoT devices across European industry.</p>
+          <div class="proj-meta">May 2017 – Apr 2020</div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top"><span class="proj-name" style="color:var(--text);">Optimal</span><span class="proj-tag">HUA internal</span></div>
+          <p class="proj-desc">Middleware for optimal replica placement in distributed key-value stores, and fault-tolerance techniques for large-scale data management infrastructures.</p>
+          <div class="proj-meta">Dec 2016 – Dec 2017</div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top"><span class="proj-name" style="color:var(--text);">Asylum Service Application</span><span class="proj-tag">National</span></div>
+          <p class="proj-desc">Mobile application for international applicants' protection.</p>
+          <div class="proj-meta">Mar 2016 – May 2016</div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-top"><a class="proj-name" href="https://www.fortissimo-project.eu/en/success-stories/508/cloudbased-simulation-of-the-binding-capacities-of-target-drug-compounds" target="_blank" rel="noopener">Fortissimo</a><span class="proj-tag">FP7</span></div>
+          <p class="proj-desc">Cloud-based simulation of the binding capacities of target drug compounds.</p>
+          <div class="proj-meta">Sep 2014 – May 2016</div>
+        </div>
+        </div>
+      </details>
+    </section>
+
+    <section id="publications">
+      <div class="filename"><b>selected peer-reviewed publications</b> <span class="comment"></span></div>
+      <h1 class="heading"><span class="comment">// output --sort=year --desc</span>Publications</h1>
+
+      <div class="pub">
+        <span class="badge conf">conference</span>
+        <a class="pub-title" href="https://arxiv.org/pdf/2607.09787" target="_blank" rel="noopener">Adversarially Guided Diffusion for LiDAR Range Image Synthesis</a>
+        <div class="pub-authors">Bouras, S., <span class="me">Makris, A.</span>, Gkillas, A., Lalos, A. S., & Tserpes, K. (2026).Joint European Conference on Machine Learning and Knowledge Discovery in Databases.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge conf">conference</span>
+        <a class="pub-title" href="https://link.springer.com/chapter/10.1007/978-3-032-19102-1_31" target="_blank" rel="noopener">Robust federated learning under adversarial attacks via loss-based client clustering</a>
+        <div class="pub-authors">Kritharakis, E., Jakovetic, D., <span class="me">Makris, A.</span>, & Tserpes, K. (2025).Joint European Conference on Machine Learning and Knowledge Discovery in Databases.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge jour">journal</span>
+        <a class="pub-title" href="https://www.sciencedirect.com/science/article/pii/S0167739X25002213" target="_blank" rel="noopener">GraphOpticon: A global proactive horizontal autoscaler for improved service performance & resource consumption</a>
+        <div class="pub-authors">Theodoropoulos, T., Patel, Y. S., Zdun, U., Townend, P., Korontanis, I., <span class="me">Makris, A.</span>, & Tserpes, K. (2026). Future Generation Computer Systems.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge conf">journal</span>
+        <a class="pub-title" href="https://ieeexplore.ieee.org/abstract/document/11336535" target="_blank" rel="noopener">Fedgreed: A byzantine-robust loss-based aggregation method for federated learning</a>
+        <div class="pub-authors">Kritharakis, E., <span class="me">Makris</span>, A., Jakovetic, D., & Tserpes, K. (2025). Fedgreed: A byzantine-robust loss-based aggregation method for federated learning. In 2025 3rd International Conference on Federated Learning Technologies and Applications (FLTA). IEEE.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge jour">journal</span>
+        <a class="pub-title" href="https://ieeexplore.ieee.org/document/10663442" target="_blank" rel="noopener">Cross-Cluster Networking to Support Extended Reality Services</a>
+        <div class="pub-authors">Theodoropoulos, T., Rosa, L., Boudi, A., Benmerar, T. Z., <span class="me">Makris, A.</span>, Taleb, T., et al. (2024). IEEE Network.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge jour">journal</span>
+        <a class="pub-title" href="https://www.sciencedirect.com/science/article/abs/pii/S0167739X24001353" target="_blank" rel="noopener">Pro-active component image placement in edge computing environments</a>
+        <div class="pub-authors"><span class="me">Makris, A.</span>, Psomakelis, E., Carlini, E., Mordacchini, M., Theodoropoulos, T., Dazzi, P., & Tserpes, K. (2024). Future Generation Computer Systems.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge conf">conference</span>
+        <a class="pub-title" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10255001" target="_blank" rel="noopener">GNOSIS: Proactive image placement using graph neural networks & deep reinforcement learning</a>
+        <div class="pub-authors">Theodoropoulos, T., <span class="me">Makris, A.</span>, Psomakelis, E., Carlini, E., Mordacchini, M., Dazzi, P., & Tserpes, K. (2023). IEEE CLOUD.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge jour">journal</span>
+        <a class="pub-title" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9466112" target="_blank" rel="noopener">A comparison of trajectory compression algorithms over AIS data</a>
+        <div class="pub-authors"><span class="me">Makris, A.</span>, Kontopoulos, I., Alimisis, P., & Tserpes, K. (2021). IEEE Access.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge jour">journal</span>
+        <a class="pub-title" href="https://link.springer.com/article/10.1007/s10707-020-00407-w" target="_blank" rel="noopener">MongoDB vs. PostgreSQL: A comparative study on performance aspects</a>
+        <div class="pub-authors"><span class="me">Makris, A.</span>, Tserpes, K., Spiliopoulos, G., Zissis, D., & Anagnostopoulos, D. (2021). GeoInformatica.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge jour">journal</span>
+        <a class="pub-title" href="https://www.sciencedirect.com/science/article/pii/S0167739X1830058X" target="_blank" rel="noopener">Parallelization of large-scale drug–protein binding experiments</a>
+        <div class="pub-authors">Michail, D., <span class="me">Makris, A.</span>, Varlamis, I., & Sawyer, M. (2019). Future Generation Computer Systems.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge conf">conference</span>
+        <a class="pub-title" href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8258300" target="_blank" rel="noopener">A novel object placement protocol for minimizing the average response time of get operations in distributed key-value stores</a>
+        <div class="pub-authors"><span class="me">Makris, A.</span>, Tserpes, K., & Anagnostopoulos, D. (2017). IEEE Big Data.</div>
+      </div>
+
+      <div class="pub">
+        <span class="badge jour">journal</span>
+        <a class="pub-title" href="https://www.sciencedirect.com/science/article/pii/S1877050916321007" target="_blank" rel="noopener">A classification of NoSQL data stores based on key design characteristics</a>
+        <div class="pub-authors"><span class="me">Makris, A.</span>, Tserpes, K., Andronikou, V., & Anagnostopoulos, D. (2016). Procedia Computer Science.</div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <p class="quote">Reality is created by the mind. We can change our reality by changing our mind.</p>
+</footer>
+
+<!--<div class="row">-->
+<!--  <div class="col-md-8"></div>-->
+<!--  <p align="right"><i><b><span id="lastUpdate"></span></b></i></p>-->
+<!--  <br />-->
+<!--  <br />-->
+<!--  <br />-->
+<!--</div>-->
 
 </body>
 </html>
